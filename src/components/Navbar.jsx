@@ -5,7 +5,7 @@ import dark_icon from "../assets/dark_icon.svg";
 
 const Navbar = () => {
   return (
-    <div className="navbar fixed top-0 bg-transparent w-full px-[60px] py-[20px] flex justify-between items-center">
+    <div className="navbar absolute top-0 bg-transparent w-full px-[60px] py-[20px] flex justify-between items-center">
       <img src={logo} alt="logo" />
 
       <nav className="flex gap-[20px] items-center">

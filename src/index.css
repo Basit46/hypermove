@@ -63,7 +63,7 @@
 @font-face {
   font-family: "PilatExtended-Heavy";
   src: url("./assets/fonts/PilatExtended-Heavy.woff2") format("woff2");
-  font-weight: 800; /* Adjust as needed */
+  font-weight: 900; /* Adjust as needed */
   font-style: normal;
 }
 
@@ -93,9 +93,6 @@
 
 body {
   font-family: "PilatExtended-Regular", sans-serif;
-}
-
-.home {
   background: linear-gradient(0deg, #000513, #000513),
     linear-gradient(180deg, rgba(1, 0, 1, 0) 51.91%, #010001 69.15%);
 }
@@ -104,4 +101,9 @@ body {
   background: linear-gradient(180deg, #ffffff 0%, #898989 118.38%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+}
+
+.text-outline {
+  -webkit-text-stroke-width: 1.88px;
+  -webkit-text-stroke-color: #41b0e81f;
 }

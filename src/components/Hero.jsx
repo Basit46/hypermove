@@ -10,7 +10,7 @@ import herobg2 from "../assets/hero-bg2.svg";
 const Hero = () => {
   return (
     <div className="">
-      <img className="fixed top-0 left-0" src={heroBg} alt="game demo" />
+      <img className="absolute top-0 left-0" src={heroBg} alt="game demo" />
       <Navbar />
 
       <div className="relative w-fit mx-auto pt-[130px] ">
