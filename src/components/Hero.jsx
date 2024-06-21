@@ -9,7 +9,7 @@ import herobg2 from "../assets/hero-bg2.svg";
 
 const Hero = () => {
   return (
-    <div className="">
+    <div className="relative w-full">
       <img className="absolute top-0 left-0" src={heroBg} alt="game demo" />
       <Navbar />
 
@@ -53,6 +53,8 @@ const Hero = () => {
           <img src={herobg2} alt="bg" />
         </div>
       </div>
+
+      <div className="absolute bottom-[-50px] left-0 z-[-1] w-full h-[60px] gr bg-gradient-to-b from-black to-transparent"></div>
     </div>
   );
 };

@@ -4,7 +4,7 @@ import About from "../components/About";
 
 const Home = () => {
   return (
-    <div className="home h-screen">
+    <div className="w-full">
       <Hero />
       <About />
     </div>
