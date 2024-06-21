@@ -1,0 +1,107 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  nav p {
+    @apply font-Montserrat font-[600];
+  }
+  nav p.active {
+    background: linear-gradient(270deg, #00ffd1 -16.84%, #7e60ff 100%);
+    clip-path: polygon(15% 0%, 100% 0%, 85% 100%, 0% 100%);
+
+    @apply w-[122px] h-[29px] grid place-items-center text-black rounded-tr-[8px] rounded-bl-[8px];
+  }
+  nav > span {
+    @apply text-[10px] text-white/50;
+  }
+
+  .navbar .icons > div {
+    clip-path: polygon(15% 0%, 100% 0%, 85% 100%, 0% 100%);
+    @apply w-[80px] h-[29px] grid place-items-center;
+  }
+  .navbar .icons > div.active {
+    @apply bg-white rounded-tr-[8px] rounded-bl-[8px];
+  }
+}
+
+/* Regular */
+@font-face {
+  font-family: "PilatExtended-Regular";
+  src: url("./assets/fonts/PilatExtended-Regular.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* Black */
+@font-face {
+  font-family: "PilatExtended-Black";
+  src: url("./assets/fonts/PilatExtended-Black.woff2") format("woff2");
+  font-weight: 900; /* Adjust as needed */
+  font-style: normal;
+}
+
+/* Bold */
+@font-face {
+  font-family: "PilatExtended-Bold";
+  src: url("./assets/fonts/PilatExtended-Bold.woff2") format("woff2");
+  font-weight: bold;
+  font-style: normal;
+}
+
+/* DemiBold */
+@font-face {
+  font-family: "PilatExtended-DemiBold";
+  src: url("./assets/fonts/PilatExtended-DemiBold.woff2") format("woff2");
+  font-weight: 600; /* Adjust as needed */
+  font-style: normal;
+}
+
+/* Heavy */
+@font-face {
+  font-family: "PilatExtended-Heavy";
+  src: url("./assets/fonts/PilatExtended-Heavy.woff2") format("woff2");
+  font-weight: 800; /* Adjust as needed */
+  font-style: normal;
+}
+
+/* Light */
+@font-face {
+  font-family: "PilatExtended-Light";
+  src: url("./assets/fonts/PilatExtended-Light.woff2") format("woff2");
+  font-weight: 300; /* Adjust as needed */
+  font-style: normal;
+}
+
+/* Book */
+@font-face {
+  font-family: "PilatExtended-Book";
+  src: url("./assets/fonts/PilatExtended-Book.woff2") format("woff2");
+  font-weight: 400; /* Adjust as needed */
+  font-style: normal;
+}
+
+/* Thin */
+@font-face {
+  font-family: "PilatExtended-Thin";
+  src: url("./assets/fonts/PilatExtended-Thin.woff2") format("woff2");
+  font-weight: 100; /* Adjust as needed */
+  font-style: normal;
+}
+
+body {
+  font-family: "PilatExtended-Regular", sans-serif;
+}
+
+.home {
+  background: linear-gradient(0deg, #000513, #000513),
+    linear-gradient(180deg, rgba(1, 0, 1, 0) 51.91%, #010001 69.15%);
+}
+
+.text-gradient {
+  background: linear-gradient(180deg, #ffffff 0%, #898989 118.38%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
