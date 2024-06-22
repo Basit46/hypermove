@@ -5,7 +5,7 @@ import { BottomClaim, TopClaim } from "./Claim";
 const Ecosystem = () => {
   return (
     <div className="mt-[100px] ecosystem">
-      <h1 className="uppercase leading-none text-center text-[49px]">
+      <h1 className="uppercase leading-none text-center text-[25px] md:text-[30px] xmd:text-[49px]">
         contributing to <br />
         ecosystem
       </h1>

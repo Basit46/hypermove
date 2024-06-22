@@ -8,16 +8,16 @@ import img2 from "../assets/articleImg2.png";
 
 const Blog = () => {
   return (
-    <div className="blog mt-[100px] min-h-[100vh]">
-      <h1 className="leading-none pr-[200px] text-end text-outline text-[90px] text-transparent font-[PilatExtended-Heavy]">
+    <div className="blog mt-[100px]">
+      <h1 className="leading-none pr-[20px] xmd:pr-[200px] text-end text-outline text-[50px] md:text-[50px] xmd:text-[90px] text-transparent font-[PilatExtended-Heavy]">
         BLOGS
       </h1>
-      <p className="pr-[60px] text-end uppercase text-[32px] font-[PilatExtended-Heavy]">
+      <p className="pr-[20px] md:pr-[60px] text-end uppercase text-[30px] xmd:text-[32px] font-[PilatExtended-Heavy]">
         latest news
       </p>
 
       <div className="mt-[20px] relative flex justify-center h-fit gap-[40px] items-center">
-        <div className="h-full">
+        <div className="hidden lg:block h-full">
           <div className="group cursor-pointer">
             <div className="article1 relative flex justify-center items-center group-hover:translate-x-[-100px] duration-200 group-hover:bg-article-gradient">
               <img src={border1} alt="border" />
@@ -63,9 +63,9 @@ const Blog = () => {
           </div>
         </div>
 
-        <div className="relative w-fit h-fit">
+        <div className="relative w-[90%] md:w-fit h-fit">
           <img src={blogImg} alt="game demo" />
-          <p className="absolute bottom-[20px] left-[10px] w-full text-[14px] text-[#D9D9D9] opacity-70">
+          <p className="absolute bottom-[20px] left-[10px] w-full text-[12px] md:text-[14px] text-[#D9D9D9] opacity-70">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             eiusmod tempor incididunt ut labore et dolore magna aliqua.
           </p>
