@@ -3,6 +3,7 @@ import logo from "../assets/logo.svg";
 import light_icon from "../assets/light_icon.svg";
 import dark_icon from "../assets/dark_icon.svg";
 import { useTheme } from "../context/ThemeContext";
+import menu from "../assets/menuIcon.svg";
 
 const Navbar = () => {
   const { theme, setTheme } = useTheme();
@@ -34,6 +35,10 @@ const Navbar = () => {
           <img src={dark_icon} alt="dark icon" />
         </div>
       </div>
+
+      <button className="flex lg:hidden">
+        <img src={menu} alt="menu bar" />
+      </button>
     </div>
   );
 };

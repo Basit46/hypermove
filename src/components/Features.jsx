@@ -19,7 +19,7 @@ const Features = () => {
         </h3>
       </div>
 
-      <div className="w-[90%] mx-auto relative mt-[10px] sm:mt-[30px] xl:mt-[80px] flex items-center justify-center">
+      <div className="mx-auto relative mt-[10px] sm:mt-[30px] xl:mt-[80px] flex items-center justify-center">
         <button className="absolute z-[20] left-[-70px] top-1/2 -translate-y-1/2">
           <img src={arrow1} alt="arrow" />
         </button>
