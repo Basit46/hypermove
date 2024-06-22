@@ -7,6 +7,7 @@ import Token from "../components/Token";
 import Ecosystem from "../components/Ecosystem";
 import line2 from "../assets/token-line2.png";
 import Blog from "../components/Blog";
+import Footer from "../components/Footer";
 
 const Home = () => {
   return (
@@ -24,6 +25,7 @@ const Home = () => {
       />
       <Ecosystem />
       <Blog />
+      <Footer />
     </div>
   );
 };

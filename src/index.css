@@ -121,8 +121,9 @@
 
   body {
     font-family: "PilatExtended-Regular", sans-serif;
-    background: linear-gradient(0deg, #000513, #000513),
-      linear-gradient(180deg, rgba(1, 0, 1, 0) 51.91%, #010001 69.15%);
+    /* background: linear-gradient(0deg, #000513, #000513),
+      linear-gradient(180deg, rgba(1, 0, 1, 0) 51.91%, #010001 69.15%); */
+    background: black;
   }
 
   .text-gradient {
@@ -625,6 +626,14 @@
       313.815794px 128.951399px,
       312.589px 129px,
       210.873px 129px
+    );
+  }
+  footer {
+    background: linear-gradient(
+      84.36deg,
+      #00ffd1 -0.01%,
+      #010101 26.63%,
+      #8062ff 100%
     );
   }
 }
