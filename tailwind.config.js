@@ -14,6 +14,8 @@ export default {
         "custom-gradient":
           "linear-gradient(180deg, #FFFFFF 0%, #898989 118.38%)",
         "custom-gradient2": "linear-gradient(90deg, #00FFD1 0%, #8062FF 100%)",
+        "article-gradient":
+          "linear-gradient(266.72deg, #5629EA -5.79%, #00FFD1 115.6%)",
       },
     },
   },
