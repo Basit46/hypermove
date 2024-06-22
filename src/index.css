@@ -113,4 +113,19 @@
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
   }
+
+  .heroes {
+    background: linear-gradient(
+      180deg,
+      rgba(128, 98, 255, 0) 24.35%,
+      rgba(0, 255, 209, 0.7) 117.93%
+    );
+  }
+
+  .heroes-shape1 {
+    clip-path: polygon(0 0, 95% 0, 100% 100%, 0% 100%);
+  }
+  .heroes-shape2 {
+    clip-path: polygon(100% 0, 0% 100%, 100% 100%);
+  }
 }
