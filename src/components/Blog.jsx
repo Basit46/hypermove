@@ -3,6 +3,8 @@ import blogImg from "../assets/blogImg.png";
 import border1 from "../assets/articleBorder1.png";
 import date1 from "../assets/articleDate1.svg";
 import img1 from "../assets/articleImg1.png";
+import border2 from "../assets/articleBorder2.png";
+import img2 from "../assets/articleImg2.png";
 
 const Blog = () => {
   return (
@@ -16,17 +18,46 @@ const Blog = () => {
 
       <div className="mt-[20px] relative flex justify-center h-fit gap-[40px] items-center">
         <div className="h-full">
-          <div className="bg-[red]">
-            <div className="article1 relative flex justify-center items-center hover:translate-x-[-100px] duration-200 hover:bg-article-gradient cursor-pointer">
+          <div className="group cursor-pointer">
+            <div className="article1 relative flex justify-center items-center group-hover:translate-x-[-100px] duration-200 group-hover:bg-article-gradient">
               <img src={border1} alt="border" />
               <div className="absolute w-full h-full px-[20px] py-[15px] flex flex-col justify-between">
-                <p className="text-[16px] opacity-70 uppercase">
+                <p className="text-[16px] font-semibold opacity-70 uppercase">
                   Lorem ipsum dolor sit amet
                 </p>
                 <div className="flex justify-between">
                   <img src={img1} alt="article" />
                   <img src={date1} alt="article" />
                 </div>
+              </div>
+            </div>
+          </div>
+
+          <div className="group cursor-pointer">
+            <div className="article1 relative flex justify-center items-center group-hover:translate-x-[-100px] duration-200 group-hover:bg-article-gradient">
+              <img src={border1} alt="border" />
+              <div className="absolute w-full h-full px-[20px] py-[15px] flex flex-col justify-between">
+                <div className="flex justify-between">
+                  <img src={date1} alt="article" />
+                </div>
+                <p className="text-[16px] text-end font-semibold opacity-70 uppercase">
+                  Lorem ipsum dolor sit amet
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div className="group cursor-pointer">
+            <div className="article2 relative flex justify-center items-center group-hover:translate-x-[-100px] duration-200 group-hover:bg-article-gradient">
+              <img src={border2} alt="border" />
+              <div className="absolute w-full h-full px-[20px] py-[15px] flex flex-col justify-between">
+                <div className="flex justify-between">
+                  <img src={img2} alt="article" />
+                  <img src={date1} alt="article" />
+                </div>
+                <p className="text-[16px] font-semibold opacity-70 uppercase">
+                  Lorem ipsum dolor sit amet
+                </p>
               </div>
             </div>
           </div>
