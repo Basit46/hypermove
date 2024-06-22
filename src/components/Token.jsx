@@ -5,6 +5,8 @@ import bg3 from "../assets/tokenImg3.png";
 import coin1 from "../assets/coinImg1.png";
 import coin2 from "../assets/coinImg2.png";
 import coin3 from "../assets/coinImg3.png";
+import line from "../assets/token-line.png";
+import line2 from "../assets/token-line2.png";
 
 const Token = () => {
   return (
@@ -42,6 +44,11 @@ const Token = () => {
 
       <div className="absolute right-0 bottom-0 flex gap-[4px] items-end">
         <div className="token-box">
+          <img
+            className="absolute left-0 top-[-115px]"
+            src={line}
+            alt="border"
+          />
           <img className="absolute left-0 top-[-30px]" src={coin3} alt="coin" />
           <img className="w-full" src={bg1} alt="Token bg" />
           <div className="">
@@ -79,6 +86,12 @@ const Token = () => {
           </div>
         </div>
       </div>
+
+      <img
+        className="absolute bottom-[-70px] left-0 w-full"
+        src={line2}
+        alt="line"
+      />
     </div>
   );
 };
