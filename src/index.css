@@ -636,4 +636,7 @@
       #8062ff 100%
     );
   }
+  .semi-circle {
+    clip-path: inset(0 0 0 0 round 50% 0% 0% 0%);
+  }
 }
