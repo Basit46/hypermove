@@ -6,7 +6,6 @@ import coin1 from "../assets/coinImg1.png";
 import coin2 from "../assets/coinImg2.png";
 import coin3 from "../assets/coinImg3.png";
 import line from "../assets/token-line.png";
-import line2 from "../assets/token-line2.png";
 
 const Token = () => {
   return (
@@ -86,12 +85,6 @@ const Token = () => {
           </div>
         </div>
       </div>
-
-      <img
-        className="absolute bottom-[-70px] left-0 w-full"
-        src={line2}
-        alt="line"
-      />
     </div>
   );
 };
