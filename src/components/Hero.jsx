@@ -9,15 +9,18 @@ import herobg2 from "../assets/hero-bg2.svg";
 
 const Hero = () => {
   return (
-    <div className="relative w-full">
+    <div className="relative w-full bg-[#000513] dark:black">
       <img className="absolute top-0 left-0" src={heroBg} alt="game demo" />
       <Navbar />
 
       <div className="relative w-fit mx-auto pt-[130px] ">
-        <p className="text-center text-[24px] opacity-[0.5] ">WORLD'S FIRST</p>
+        <p className="text-center text-[24px] text-white opacity-[0.5]">
+          WORLD'S FIRST
+        </p>
 
         <h1 className="relative mt-[20px] uppercase text-center text-[48px] leading-[1.1] font-[PilatExtended-Heavy]">
-          <span className="text-[#00FFD1]">fps gaming</span> platform <br />{" "}
+          <span className="text-[#00FFD1]">fps gaming</span>{" "}
+          <span className="text-white">platform</span> <br />{" "}
           <span className="text-gradient text-[103px] leading-[0.6]">
             on bitcoin
           </span>
@@ -39,7 +42,7 @@ const Hero = () => {
         </h1>
       </div>
 
-      <div className="mt-[30px] flex justify-center gap-[20px] items-center">
+      <div className="mt-[20px] flex justify-center gap-[20px] items-center">
         <div className="relative grid place-items-center">
           <p className="absolute top-1/2 -translate-y-1/2 font-[500] font-Montserrat text-[#00FFD1]">
             Marketplace
@@ -47,7 +50,7 @@ const Hero = () => {
           <img src={herobg1} alt="bg" />
         </div>
         <div className="relative grid place-items-center">
-          <p className="absolute top-1/2 -translate-y-1/2 font-[600] font-Montserrat">
+          <p className="absolute top-1/2 -translate-y-1/2 font-[600] font-Montserrat text-white">
             Download Game
           </p>
           <img src={herobg2} alt="bg" />

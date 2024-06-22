@@ -62,8 +62,8 @@ const Token = () => {
         <div className="flex flex-col">
           <div className="token-box">
             <img className="w-full" src={bg2} alt="Token bg" />
-            <div className="">
-              <div className="ml-auto" />
+            <div>
+              <div className="ml-auto mt-[-30px]" />
               <h3 className="text-end">NFT Marketplace:</h3>
               <p className="text-end">
                 Use $HYPE tokens as the primary currency for purchasing,

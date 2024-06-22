@@ -10,8 +10,8 @@ import gradient3 from "../assets/about-gradient3.png";
 
 const About = () => {
   return (
-    <div className="relative w-full">
-      <h1 className="mt-[30px] text-outline text-[95.86px] text-transparent text-center font-[PilatExtended-Heavy]">
+    <div className="relative mt-[0px] w-full bg-[#000513] dark:bg-black">
+      <h1 className="pt-[30px] text-outline text-[95.86px] text-transparent text-center font-[PilatExtended-Heavy]">
         HYPERMOVE
       </h1>
 
@@ -19,12 +19,12 @@ const About = () => {
         <div className="mt-[80px] w-[35%] 2xl:w-[37%] flex flex-col items-center">
           <p className="text-center">
             <span className="text-[#00FFD1]">Hypermove</span>{" "}
-            <span className="opacity-[0.5]">
+            <span className="opacity-[0.5] text-white">
               seamlessly integrates cutting-edge solutions like account
               abstraction & bridging the gap between web2 and web3 gaming.
             </span>
           </p>
-          <li className="mt-[20px] text-center opacity-[0.5] list-disc">
+          <li className="mt-[20px] text-center text-white opacity-[0.5] list-disc">
             Our mission is to elevate the gaming experience by introducing
             in-game NFTs, DeFi integration, AI agents, NPCs, and a diverse range
             of game modes.

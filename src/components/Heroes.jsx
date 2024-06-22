@@ -41,8 +41,8 @@ const Heroes = () => {
         alt="background"
       />
 
-      <div className="heroes-shape1 absolute left-0 bottom-[-2px] w-[30%] h-[20px] bg-[#000513] " />
-      <div className="heroes-shape2 absolute right-0 bottom-[-2px] size-[100px] bg-[#000513] " />
+      <div className="heroes-shape1 absolute left-0 bottom-[-2px] w-[30%] h-[20px] bg-white dark:bg-black " />
+      <div className="heroes-shape2 absolute right-0 bottom-[-2px] size-[100px] bg-white dark:bg-black " />
     </div>
   );
 };

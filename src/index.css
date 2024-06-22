@@ -6,7 +6,7 @@
 
 @layer components {
   nav p {
-    @apply font-Montserrat font-[600];
+    @apply font-Montserrat font-[600] text-white;
   }
   nav p.active {
     background: linear-gradient(270deg, #00ffd1 -16.84%, #7e60ff 100%);
@@ -123,7 +123,6 @@
     font-family: "PilatExtended-Regular", sans-serif;
     /* background: linear-gradient(0deg, #000513, #000513),
       linear-gradient(180deg, rgba(1, 0, 1, 0) 51.91%, #010001 69.15%); */
-    background: black;
   }
 
   .text-gradient {
