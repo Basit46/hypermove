@@ -12,8 +12,8 @@ const Token = () => {
     <div className="token relative mt-[20px] mx-[60px]">
       <div className="flex">
         <div className="w-fit h-fit relative">
-          <div className="token-box1" />
-          <div className="token-box2 absolute bottom-0 right-0" />
+          <div className="token-box1 bg-[#222324] dark:bg-[#5741b4]" />
+          <div className="token-box2 bg-[#222324] dark:bg-[#5741b4] absolute bottom-0 right-0" />
 
           <img
             className="absolute top-1/2 -translate-y-1/2 right-[-100px]"

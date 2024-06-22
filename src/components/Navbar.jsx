@@ -7,10 +7,10 @@ import { useTheme } from "../context/ThemeContext";
 const Navbar = () => {
   const { theme, setTheme } = useTheme();
   return (
-    <div className="navbar absolute top-0 bg-transparent w-full px-[60px] py-[20px] flex justify-between items-center">
+    <div className="navbar absolute top-0 bg-transparent w-full px-[20px] sm:px-[40px] xmd:px-[60px] py-[20px] flex justify-between items-center">
       <img src={logo} alt="logo" />
 
-      <nav className="flex gap-[20px] items-center">
+      <nav className="hidden lg:flex gap-[20px] items-center">
         <p className="active">HOME</p>
         <span>/</span>
         <p>PARTNERS</p>
@@ -20,7 +20,7 @@ const Navbar = () => {
         <p>TEAM</p>
       </nav>
 
-      <div className="icons flex items-center h-[29px] cursor-pointer">
+      <div className="hidden icons lg:flex items-center h-[29px] cursor-pointer">
         <div
           onClick={() => setTheme("light")}
           className={`${theme !== "dark" && "active"} duration-200`}

@@ -13,29 +13,29 @@ const Hero = () => {
       <img className="absolute top-0 left-0" src={heroBg} alt="game demo" />
       <Navbar />
 
-      <div className="relative w-fit mx-auto pt-[130px] ">
-        <p className="text-center text-[24px] text-white opacity-[0.5]">
+      <div className="relative w-fit mx-auto pt-[100px] md:pt-[130px] ">
+        <p className="text-center text-[12px] md:text-[16px] xmd:text-[24px] text-white opacity-[0.5]">
           WORLD'S FIRST
         </p>
 
-        <h1 className="relative mt-[20px] uppercase text-center text-[48px] leading-[1.1] font-[PilatExtended-Heavy]">
+        <h1 className="relative mt-[10px] md:mt-[20px] uppercase text-center text-[32px] md:text-[40px] xmd:text-[48px] leading-[1.1] font-[PilatExtended-Heavy]">
           <span className="text-[#00FFD1]">fps gaming</span>{" "}
           <span className="text-white">platform</span> <br />{" "}
-          <span className="text-gradient text-[103px] leading-[0.6]">
+          <span className="text-gradient text-[32px] xmd:text-[50px] xl:text-[103px] leading-[0.6]">
             on bitcoin
           </span>
           <img
-            className="absolute left-[-67px] top-[-140px]"
+            className="absolute hidden md:block left-[-67px] top-[-140px]"
             src={part1}
             alt="part"
           />
           <img
-            className="absolute right-[130px] top-[-20px]"
+            className="absolute hidden md:block right-[130px] top-[-20px]"
             src={part2}
             alt="part"
           />
           <img
-            className="absolute right-[-50px] top-[-6px]"
+            className="absolute hidden md:block right-[-50px] top-[-6px]"
             src={part3}
             alt="part"
           />

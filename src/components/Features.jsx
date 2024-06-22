@@ -10,16 +10,16 @@ import filled from "../assets/filled.svg";
 const Features = () => {
   return (
     <div className="px-[30px]">
-      <div className="relative mt-[-140px] w-fit ml-auto">
-        <h1 className="ml-auto text-outline text-[70px] text-transparent font-[PilatExtended-Heavy]">
+      <div className="relative mt-[230px] sm:mt-[200px] md:mt-[70px] xl:mt-[-140px] w-fit ml-auto">
+        <h1 className="hidden xl:block ml-auto text-outline text-[70px] text-transparent font-[PilatExtended-Heavy]">
           FEATURES
         </h1>
-        <h3 className="mt-[-25px] text-[32px] clip-text font-[PilatExtended-Heavy] bg-custom-gradient2">
+        <h3 className="mt-[-25px] text-[12px] vsm:text-[20px] md:text-[32px] clip-text font-[PilatExtended-Heavy] bg-custom-gradient2">
           WHAT WE OFFER?
         </h3>
       </div>
 
-      <div className="w-[90%] mx-auto relative mt-[80px] flex items-center justify-center">
+      <div className="w-[90%] mx-auto relative mt-[10px] sm:mt-[30px] xl:mt-[80px] flex items-center justify-center">
         <button className="absolute z-[20] left-[-70px] top-1/2 -translate-y-1/2">
           <img src={arrow1} alt="arrow" />
         </button>

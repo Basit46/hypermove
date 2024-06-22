@@ -11,34 +11,38 @@ import gradient3 from "../assets/about-gradient3.png";
 const About = () => {
   return (
     <div className="relative mt-[0px] w-full bg-[#000513] dark:bg-black">
-      <h1 className="pt-[30px] text-outline text-[95.86px] text-transparent text-center font-[PilatExtended-Heavy]">
+      <h1 className="pt-[30px] text-outline text-[20px] vsm:text-[30px] md:text-[50px] xmd:text-[95.86px] text-transparent text-center font-[PilatExtended-Heavy]">
         HYPERMOVE
       </h1>
 
-      <div className="relative z-[2] mt-[-40px] flex justify-center gap-[20px]">
-        <div className="mt-[80px] w-[35%] 2xl:w-[37%] flex flex-col items-center">
+      <div className="relative z-[2] mt-[-40px] flex flex-col-reverse xl:flex-row xl:justify-center xl:gap-[20px]">
+        <div className="mt-[-50px] xl:mt-[80px] mx-auto w-[90%] xmd:w-[70%] xl:w-[35%] 2xl:w-[37%] flex flex-col items-center">
           <p className="text-center">
             <span className="text-[#00FFD1]">Hypermove</span>{" "}
-            <span className="opacity-[0.5] text-white">
+            <span className="opacity-[0.5] text-white text-[8px] vsm:text-[14px] md:text-[16px]">
               seamlessly integrates cutting-edge solutions like account
               abstraction & bridging the gap between web2 and web3 gaming.
             </span>
           </p>
-          <li className="mt-[20px] text-center text-white opacity-[0.5] list-disc">
+          <li className="mt-[20px] text-center text-white text-[8px] vsm:text-[14px] md:text-[16px] opacity-[0.5] list-disc">
             Our mission is to elevate the gaming experience by introducing
             in-game NFTs, DeFi integration, AI agents, NPCs, and a diverse range
             of game modes.
           </li>
-          <img className="mt-[40px] h-fit w-fit" src={arrow} alt="arrow" />
+          <img
+            className="hidden xl:block mt-[40px] h-fit w-fit"
+            src={arrow}
+            alt="arrow"
+          />
         </div>
 
-        <div className="">
+        <div className="mx-auto">
           <img src={img1} alt="game demo" />
         </div>
       </div>
 
       <img
-        className="absolute bottom-[-300px] right-[0px]"
+        className="absolute hidden xl:block bottom-[-300px] right-[0px]"
         src={img2}
         alt="weapon"
       />
@@ -59,7 +63,7 @@ const About = () => {
         src={gradient1}
         alt="gradient"
       />
-      <img className="absolute top-0 right-0 " src={gradient2} alt="gradient" />
+      <img className="absolute top-0 right-0" src={gradient2} alt="gradient" />
       <img className="absolute top-0 right-0" src={gradient3} alt="gradient" />
     </div>
   );
