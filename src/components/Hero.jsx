@@ -25,17 +25,17 @@ const Hero = () => {
             on bitcoin
           </span>
           <img
-            className="absolute hidden md:block left-[-67px] top-[-140px]"
+            className="absolute hidden md:block left-[-67px] top-[-140px] animate-bounce-c"
             src={part1}
             alt="part"
           />
           <img
-            className="absolute hidden md:block right-[130px] top-[-20px]"
+            className="absolute hidden md:block right-[130px] top-[-20px] animate-bounce-c"
             src={part2}
             alt="part"
           />
           <img
-            className="absolute hidden md:block right-[-50px] top-[-6px]"
+            className="absolute hidden md:block right-[-50px] top-[-6px] animate-bounce-c"
             src={part3}
             alt="part"
           />

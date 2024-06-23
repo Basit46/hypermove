@@ -156,6 +156,21 @@
     clip-path: polygon(100% 0, 0% 100%, 100% 100%);
   }
 
+  @keyframes bounce {
+    0%,
+    100% {
+      transform: translateY(-20%);
+      animation-timing-function: cubic-bezier(0.8, 0, 1, 1);
+    }
+    50% {
+      transform: none;
+      animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
+    }
+  }
+  .animate-bounce-c {
+    animation: bounce 3s infinite;
+  }
+
   .token-box1 {
     width: 334px;
     height: 569px;
