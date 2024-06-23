@@ -15,16 +15,16 @@ const About = () => {
         HYPERMOVE
       </h1>
 
-      <div className="relative z-[2] mt-[-40px] flex flex-col-reverse xl:flex-row xl:justify-center xl:gap-[20px]">
+      <div className="mt-[-20px] relative z-[2] vsm:mt-[-40px] flex flex-col-reverse xl:flex-row xl:justify-center gap-[20px] vsm:gap-0 xl:gap-[20px]">
         <div className="mt-[-50px] xl:mt-[80px] mx-auto w-[90%] xmd:w-[70%] xl:w-[35%] 2xl:w-[37%] flex flex-col items-center">
-          <p className="text-center">
+          <p className="text-center leading-[1.4] text-[13px] vsm:text-[16px]">
             <span className="text-[#00FFD1]">Hypermove</span>{" "}
-            <span className="opacity-[0.5] text-white text-[8px] vsm:text-[14px] md:text-[16px]">
+            <span className="opacity-[0.5] text-white">
               seamlessly integrates cutting-edge solutions like account
               abstraction & bridging the gap between web2 and web3 gaming.
             </span>
           </p>
-          <li className="mt-[20px] text-center text-white text-[8px] vsm:text-[14px] md:text-[16px] opacity-[0.5] list-disc">
+          <li className="mt-[10px] vsm:mt-[20px] text-center text-white leading-[1.3] text-[13px] vsm:text-[16px] opacity-[0.5] list-disc">
             Our mission is to elevate the gaming experience by introducing
             in-game NFTs, DeFi integration, AI agents, NPCs, and a diverse range
             of game modes.

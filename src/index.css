@@ -47,10 +47,10 @@
       #ffd2a2 102.52%
     );
 
-    @apply text-[14px] uppercase mb-[5px] clip-text;
+    @apply text-[12px] vsm:text-[14px] uppercase mb-[5px] clip-text;
   }
   .token .token-box p {
-    @apply text-[14px] opacity-70;
+    @apply text-[11px] vsm:text-[14px] opacity-70;
   }
 }
 

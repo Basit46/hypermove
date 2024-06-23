@@ -13,7 +13,7 @@ const Hero = () => {
       <img className="absolute top-0 left-0" src={heroBg} alt="game demo" />
       <Navbar />
 
-      <div className="relative w-fit mx-auto pt-[100px] md:pt-[130px] ">
+      <div className="relative w-fit mx-auto pt-[80px] md:pt-[130px] ">
         <p className="text-center text-[12px] md:text-[16px] xmd:text-[24px] text-white opacity-[0.5]">
           WORLD'S FIRST
         </p>
@@ -42,15 +42,16 @@ const Hero = () => {
         </h1>
       </div>
 
-      <div className="mt-[20px] flex justify-center gap-[20px] items-center">
-        <div className="relative grid place-items-center">
-          <p className="absolute top-1/2 -translate-y-1/2 font-[500] font-Montserrat text-[#00FFD1]">
+      <div className="mt-[20px] flex justify-center gap-[5px] vsm:gap-[20px] items-center">
+        <div className="w-[13=40px] vsm:w-fit relative grid place-items-center">
+          <p className="absolute top-1/2 -translate-y-1/2 font-[500] text-[14px] vsm:text-base font-Montserrat text-[#00FFD1]">
             Marketplace
           </p>
           <img src={herobg1} alt="bg" />
         </div>
-        <div className="relative grid place-items-center">
-          <p className="absolute top-1/2 -translate-y-1/2 font-[600] font-Montserrat text-white">
+
+        <div className="w-[140px] vsm:w-fit relative grid place-items-center">
+          <p className="absolute top-1/2 -translate-y-1/2 font-[600] text-[14px] vsm:text-base font-Montserrat text-white">
             Download Game
           </p>
           <img src={herobg2} alt="bg" />

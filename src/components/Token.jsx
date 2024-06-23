@@ -9,7 +9,7 @@ import line from "../assets/token-line.png";
 
 const Token = () => {
   return (
-    <div className="token relative mt-[20px] mx-[20px] md:mx-[40px] xmd:mx-[60px]">
+    <div className="token relative mt-[80px] vsm:mt-[20px] mx-[20px] md:mx-[40px] xmd:mx-[60px]">
       <div className="flex">
         <div className="w-fit h-fit relative">
           <div className="token-box1 hidden xl:block bg-[#222324] dark:bg-[#5741b4]" />
@@ -20,7 +20,7 @@ const Token = () => {
             src={coin1}
             alt="coin"
           />
-          <h1 className="absolute xl:top-1/2 xl:-translate-y-1/2 xl:right-[-400px] xl:mt-[-20px] font-[PilatExtended-Heavy] text-[64px] leading-none uppercase">
+          <h1 className="absolute xl:top-1/2 xl:-translate-y-1/2 xl:right-[-400px] xl:mt-[-20px] font-[PilatExtended-Heavy] text-[40px] text-center vsm:text-left vsm:text-[64px] leading-none uppercase">
             Holding <br /> Token
           </h1>
         </div>
@@ -86,11 +86,13 @@ const Token = () => {
         </div>
       </div>
 
-      <div className="block xl:hidden mt-[50px]">
+      <div className="block xl:hidden mt-[20px] vsm:mt-[50px]">
         <p className="w-full text-center text-[14px] opacity-50">
-          $HYPE serves as a unified token for the entire <br /> Hypermove
-          ecosystem, enabling seamless participation <br /> in daily missions,
-          tournaments, NFT staking, and <br /> purchases with a single currency.
+          $HYPE serves as a unified token for the entire{" "}
+          <br className="hidden sm:block" /> Hypermove ecosystem, enabling
+          seamless participation <br className="hidden sm:block" /> in daily
+          missions, tournaments, NFT staking, and{" "}
+          <br className="hidden sm:block" /> purchases with a single currency.
         </p>
 
         <div className="mt-[40px] flex flex-wrap justify-center gap-[20px] items-center">

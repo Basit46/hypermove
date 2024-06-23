@@ -9,7 +9,7 @@ const Navbar = () => {
   const { theme, setTheme } = useTheme();
   return (
     <div className="navbar absolute top-0 bg-transparent w-full px-[20px] sm:px-[40px] xmd:px-[60px] py-[20px] flex justify-between items-center">
-      <img src={logo} alt="logo" />
+      <img className="h-[29px] vsm:h-fit" src={logo} alt="logo" />
 
       <nav className="hidden lg:flex gap-[20px] items-center">
         <p className="active">HOME</p>
