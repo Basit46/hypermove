@@ -65,7 +65,7 @@ const Blog = () => {
 
         <div className="relative w-[90%] md:w-fit h-fit">
           <img src={blogImg} alt="game demo" />
-          <p className="absolute bottom-[20px] left-[10px] w-full text-[12px] md:text-[14px] text-[#D9D9D9] opacity-70">
+          <p className="absolute bottom-[20px] left-[10px] px-[20px] w-full text-[12px] md:text-[14px] text-[#D9D9D9] opacity-70">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             eiusmod tempor incididunt ut labore et dolore magna aliqua.
           </p>

@@ -3,6 +3,7 @@ import React, { createContext, useContext, useState, useEffect } from "react";
 const ThemeContext = createContext();
 
 export const ThemeProvider = ({ children }) => {
+  const [isNavOpen, setIsNavOpen] = useState(false);
   const [theme, setTheme] = useState(() => {
     const savedTheme = localStorage.getItem("theme");
     return savedTheme ? savedTheme : "dark";
@@ -22,7 +23,9 @@ export const ThemeProvider = ({ children }) => {
   };
 
   return (
-    <ThemeContext.Provider value={{ theme, setTheme, toggleTheme }}>
+    <ThemeContext.Provider
+      value={{ theme, setTheme, toggleTheme, isNavOpen, setIsNavOpen }}
+    >
       {children}
     </ThemeContext.Provider>
   );

@@ -8,11 +8,13 @@ import Ecosystem from "../components/Ecosystem";
 import line2 from "../assets/token-line2.png";
 import Blog from "../components/Blog";
 import Footer from "../components/Footer";
+import MobileMenu from "../components/MobileMenu";
 
 const Home = () => {
   return (
     <div className="w-full relative">
       <Hero />
+      <MobileMenu />
       <About />
       <Features />
       <Heroes />
