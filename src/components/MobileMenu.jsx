@@ -12,16 +12,21 @@ const MobileMenu = () => {
       } z-[21] navbar duration-500 fixed top-0 left-0 w-screen h-screen bg-black pt-[140px]`}
     >
       <nav className="flex flex-col gap-[50px] items-center">
-        <p className="active">HOME</p>
+        <p onClick={() => setIsNavOpen(false)} className="active">
+          HOME
+        </p>
 
-        <p>PARTNERS</p>
+        <p onClick={() => setIsNavOpen(false)}>PARTNERS</p>
 
-        <p>ROAD MAP</p>
+        <p onClick={() => setIsNavOpen(false)}>ROAD MAP</p>
 
-        <p>TEAM</p>
+        <p onClick={() => setIsNavOpen(false)}>TEAM</p>
       </nav>
 
-      <div className="mt-[50px] icons flex flex-col gap-[50px] items-center cursor-pointer">
+      <div
+        onClick={() => setIsNavOpen(false)}
+        className="mt-[50px] icons flex flex-col gap-[50px] items-center cursor-pointer"
+      >
         <div
           onClick={() => setTheme("light")}
           className={`${theme !== "dark" && "active"} duration-200`}

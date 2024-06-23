@@ -42,7 +42,7 @@ const About = () => {
       </div>
 
       <img
-        className="absolute hidden xl:block bottom-[-300px] right-[0px]"
+        className="absolute z-[0] vsm:hidden xl:block bottom-[-20px] vsm:bottom-[-300px] right-[-50px] vsm:right-[0px]"
         src={img2}
         alt="weapon"
       />

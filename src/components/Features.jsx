@@ -21,9 +21,12 @@ const Features = () => {
 
   const settings = {
     className: "center",
-    // centerMode: true,
+    centerMode: true,
+    centerPadding: "20px",
     infinite: true,
     slidesToShow: 3,
+    slidesToScroll: 1,
+    initialSlide: 2,
     speed: 1000,
     autoplay: true,
     pauseOnHover: false,
@@ -40,6 +43,16 @@ const Features = () => {
         )}
       </div>
     ),
+    responsive: [
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          initialSlide: 1,
+        },
+      },
+    ],
   };
   return (
     <div className="px-[30px]">
@@ -47,14 +60,14 @@ const Features = () => {
         <h1 className="hidden xl:block ml-auto text-outline text-[70px] text-transparent font-[PilatExtended-Heavy]">
           FEATURES
         </h1>
-        <h3 className="vsm:mt-[-25px] mb-[50px] vsm:mb-0 text-[12px] vsm:text-[20px] md:text-[32px] clip-text font-[PilatExtended-Heavy] bg-custom-gradient2">
+        <h3 className="vsm:mt-[-25px] mb-[50px] vsm:mb-0 text-[20px] md:text-[32px] clip-text font-[PilatExtended-Heavy] bg-custom-gradient2">
           WHAT WE OFFER?
         </h3>
       </div>
 
       {/* scale-[2.2] vsm:scale-[1.2] */}
 
-      <div className="my-[50px] vsm:my-0 mx-auto  mt-[10px] sm:mt-[30px] xl:mt-[120px] ">
+      <div className=" ">
         <div className="slider-container h-fit w-full">
           <Slider {...settings}>
             {slides.map((slide, index) => (
@@ -62,9 +75,9 @@ const Features = () => {
                 key={slide.id}
                 className={`${
                   index === currentSlide
-                    ? "scale-[2.2] vsm:scale-[1.0]"
+                    ? "scale-[1.0] vsm:scale-[1.0]"
                     : "slide"
-                }  w-[397px] h-[357px]`}
+                }  w-[397px] h-fit vsm:h-[357px]`}
               >
                 <img
                   className="h-full w-full object-contain"

@@ -42,8 +42,8 @@ const Hero = () => {
         </h1>
       </div>
 
-      <div className="mt-[20px] flex justify-center gap-[5px] vsm:gap-[20px] items-center">
-        <div className="w-[13=40px] vsm:w-fit relative grid place-items-center">
+      <div className="mt-[20px] relative z-[2] flex justify-center gap-[5px] vsm:gap-[20px] items-center">
+        <div className=" vsm:w-fit relative grid place-items-center">
           <p className="absolute top-1/2 -translate-y-1/2 font-[500] text-[14px] vsm:text-base font-Montserrat text-[#00FFD1]">
             Marketplace
           </p>
