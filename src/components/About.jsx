@@ -10,7 +10,7 @@ import gradient3 from "../assets/about-gradient3.png";
 
 const About = () => {
   return (
-    <div className="relative mt-[0px] w-full bg-[#000513] dark:bg-black">
+    <div className="relative h-[65vh] vsm:h-screen md:h-[120vh] xl:h-fit w-full bg-[#000513] dark:bg-black">
       <h1 className="pt-[30px] text-outline text-[20px] vsm:text-[30px] md:text-[50px] xmd:text-[95.86px] text-transparent text-center font-[PilatExtended-Heavy]">
         HYPERMOVE
       </h1>
@@ -42,7 +42,7 @@ const About = () => {
       </div>
 
       <img
-        className="absolute z-[0] vsm:hidden xl:block bottom-[-20px] vsm:bottom-[-300px] right-[-50px] vsm:right-[0px]"
+        className="absolute z-[0] vsm:hidden xl:block top-[-120px] vsm:bottom-[-300px] right-[-50px] vsm:right-[0px]"
         src={img2}
         alt="weapon"
       />

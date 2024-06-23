@@ -28,6 +28,7 @@ const Home = () => {
       <Ecosystem />
       <Blog />
       <Footer />
+      {/* <div className="mint h-[500px] w-full bg-[red]"></div> */}
     </div>
   );
 };

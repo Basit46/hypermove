@@ -56,7 +56,7 @@ const Features = () => {
   };
   return (
     <div className="px-[30px]">
-      <div className="relative mt-[290px] vsm:mt-[230px] sm:mt-[200px] md:mt-[70px] xl:mt-[-140px] w-fit ml-auto">
+      <div className="relative mt-[20px] vsm:mt-[40px] sm:mt-[20px] md:mt-[70px] xl:mt-[-140px] w-fit ml-auto">
         <h1 className="hidden xl:block ml-auto text-outline text-[70px] text-transparent font-[PilatExtended-Heavy]">
           FEATURES
         </h1>
@@ -67,7 +67,7 @@ const Features = () => {
 
       {/* scale-[2.2] vsm:scale-[1.2] */}
 
-      <div className=" ">
+      <div className=" vsm:mt-[30px]">
         <div className="slider-container h-fit w-full">
           <Slider {...settings}>
             {slides.map((slide, index) => (
