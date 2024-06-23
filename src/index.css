@@ -156,6 +156,33 @@
     clip-path: polygon(100% 0, 0% 100%, 100% 100%);
   }
 
+  .hero-slide {
+    animation: slide-left 10s linear forwards infinite;
+  }
+  .hero-slide:hover {
+    animation-play-state: paused;
+  }
+  @keyframes slide-left {
+    to {
+      transform: translateX(-100%);
+    }
+  }
+
+  .hero-slide2 {
+    animation: slide-right 10s linear forwards infinite;
+  }
+  .hero-slide2:hover {
+    animation-play-state: paused;
+  }
+  @keyframes slide-right {
+    from {
+      transform: translateX(-50%);
+    }
+    to {
+      transform: translateX(0%);
+    }
+  }
+
   @keyframes bounce {
     0%,
     100% {

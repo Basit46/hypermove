@@ -16,7 +16,7 @@ const Token = () => {
           <div className="token-box2 hidden xl:block bg-[#222324] dark:bg-[#5741b4] absolute bottom-0 right-0" />
 
           <img
-            className="absolute hidden xl:block top-1/2 -translate-y-1/2 right-[-100px]"
+            className="absolute hidden xl:block top-1/2 -translate-y-1/2 right-[-100px] "
             src={coin1}
             alt="coin"
           />

@@ -1,5 +1,4 @@
 import React from "react";
-// import BottomSvg from "./BottomSvg";
 import { BottomClaim, TopClaim } from "./Claim";
 
 const Ecosystem = () => {
@@ -11,22 +10,40 @@ const Ecosystem = () => {
       </h1>
 
       <div className="mt-[50px] w-full overflow-x-hidden h-fit">
-        <div className="ml-[-100px] relative w-fit h-fit flex gap-[5px]">
-          <BottomClaim text="Play for 2 hours" />
-          <TopClaim text="First Kill" />
-          <BottomClaim text="Headshot Kills" />
-          <TopClaim text="Win a match" />
-          <BottomClaim text="Win 10 matches" />
+        <div className="flex hero-slide">
+          <div className="relative w-fit h-fit flex gap-[5px]">
+            <BottomClaim text="Play for 2 hours" />
+            <TopClaim text="First Kill" />
+            <BottomClaim text="Headshot Kills" />
+            <TopClaim text="Win a match" />
+            <BottomClaim text="Win 10 matches" />
+          </div>
+          <div className="relative w-fit h-fit flex gap-[5px]">
+            <BottomClaim text="Play for 2 hours" />
+            <TopClaim text="First Kill" />
+            <BottomClaim text="Headshot Kills" />
+            <TopClaim text="Win a match" />
+            <BottomClaim text="Win 10 matches" />
+          </div>
         </div>
       </div>
 
       <div className=" mt-[20px] w-full overflow-x-hidden">
-        <div className="mr-[-300px] relative w-fit flex gap-[5px]">
-          <BottomClaim text="Play for 2 hours" />
-          <TopClaim text="First Kill" />
-          <BottomClaim text="Headshot Kills" />
-          <TopClaim text="Win a match" />
-          <BottomClaim text="Win 10 matches" />
+        <div className="flex hero-slide2">
+          <div className="relative w-fit h-fit flex gap-[5px]">
+            <BottomClaim text="Play for 2 hours" />
+            <TopClaim text="First Kill" />
+            <BottomClaim text="Headshot Kills" />
+            <TopClaim text="Win a match" />
+            <BottomClaim text="Win 10 matches" />
+          </div>
+          <div className="relative w-fit h-fit flex gap-[5px]">
+            <BottomClaim text="Play for 2 hours" />
+            <TopClaim text="First Kill" />
+            <BottomClaim text="Headshot Kills" />
+            <TopClaim text="Win a match" />
+            <BottomClaim text="Win 10 matches" />
+          </div>
         </div>
       </div>
     </div>

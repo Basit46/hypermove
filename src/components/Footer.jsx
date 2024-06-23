@@ -31,7 +31,15 @@ const Footer = () => {
         </div>
 
         <div className="absolute origin-left rotate-[-90deg] right-[-175px] bottom-[-30px] h-[60px] w-[200px] bg-white dark:bg-black grid place-items-center">
-          <button className="whitespace-nowrap font-Montserrat font-[600] text-[22px]">
+          <button
+            onClick={() => {
+              window.scrollTo({
+                top: 0,
+                behavior: "smooth",
+              });
+            }}
+            className="whitespace-nowrap font-Montserrat font-[600] text-[22px]"
+          >
             👉 UP TO TOP
           </button>
         </div>

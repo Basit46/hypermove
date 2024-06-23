@@ -30,7 +30,7 @@ const About = () => {
             of game modes.
           </li>
           <img
-            className="hidden xl:block mt-[40px] h-fit w-fit"
+            className="hidden xl:block mt-[40px] h-fit w-fit animate-bounce"
             src={arrow}
             alt="arrow"
           />
