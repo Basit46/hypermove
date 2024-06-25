@@ -7,18 +7,15 @@ import Token from "../components/Token";
 import Ecosystem from "../components/Ecosystem";
 import line2 from "../assets/token-line2.png";
 import Blog from "../components/Blog";
-import Footer from "../components/Footer";
 import MobileMenu from "../components/MobileMenu";
 
 const Home = () => {
   return (
     <div className="w-full relative">
       <Hero />
-      <MobileMenu />
       <About />
       <Features />
       <Heroes />
-
       <Token />
       <img
         className="mt-[20px] absolute left-0 w-full"
@@ -27,7 +24,7 @@ const Home = () => {
       />
       <Ecosystem />
       <Blog />
-      <Footer />
+
       {/* <div className="mint h-[500px] w-full bg-[red]"></div> */}
     </div>
   );

@@ -1,5 +1,5 @@
 import React from "react";
-import Navbar from "./Navbar";
+
 import heroBg from "../assets/hero_bg.png";
 import part1 from "../assets/hero-part1.png";
 import part2 from "../assets/hero-part2.png";
@@ -11,7 +11,6 @@ const Hero = () => {
   return (
     <div className="relative w-full bg-[#000513] dark:black">
       <img className="absolute top-0 left-0" src={heroBg} alt="game demo" />
-      <Navbar />
 
       <div className="relative w-fit mx-auto pt-[80px] md:pt-[130px] ">
         <p className="text-center text-[12px] md:text-[16px] xmd:text-[24px] text-white opacity-[0.5]">

@@ -12,6 +12,8 @@ export default {
         Montserrat: ["Montserrat", "sans-serif"],
       },
       backgroundImage: {
+        "body-gradient":
+          "linear-gradient(180deg, rgba(1, 0, 1, 0) 51.91%, #010001 69.15%)",
         "custom-gradient":
           "linear-gradient(180deg, #FFFFFF 0%, #898989 118.38%)",
         "custom-gradient2": "linear-gradient(90deg, #00FFD1 0%, #8062FF 100%)",
