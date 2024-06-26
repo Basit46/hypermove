@@ -7,7 +7,7 @@ const Article = () => {
   const navigate = useNavigate();
 
   return (
-    <div className=" min-h-screen mt-[150px] mb-[100px] px-[60px]">
+    <div className=" min-h-screen mt-[120px] sm:mt-[150px] mb-[100px] px-[20px] sm:px-[40px] xmd:px-[60px]">
       <div
         onClick={() => navigate(-1)}
         className="border-b border-b-white border-opacity-10 cursor-pointer pb-[20px] mx-[20px] flex gap-[10px] items-center"
@@ -16,10 +16,10 @@ const Article = () => {
         <p>Go back</p>
       </div>
       <div>
-        <div className="mt-[30px] w-full h-[752px]">
-          <img className="w-full h-full" src={img} alt="Article" />
+        <div className="mt-[30px] w-full xmd:h-[752px]">
+          <img className="w-full h-fit xmd:h-full" src={img} alt="Article" />
         </div>
-        <div className="mt-[20px] px-[40px] flex items-center justify-between">
+        <div className="mt-[20px] sm:px-[40px] flex items-center justify-between">
           <div className="flex gap-[10px]">
             <div className="mb-[5px] w-fit px-[16px] py-[4px] rounded-[8px] bg-[#8062FF21] text-[12px] text-white text-opacity-50">
               Crypto Investment
@@ -31,14 +31,15 @@ const Article = () => {
           <p
             className={` text-white text-opacity-30 text-[12px] font-Montserrat`}
           >
-            29 December 2024 | By Alexis Richard
+            29 December 2024{" "}
+            <span className="hidden md:inline-block">| By Alexis Richard</span>
           </p>
         </div>
-        <div className="mt-[30px] px-[40px]">
-          <h1 className="text-[40px] font-bold font-Montserrat">
+        <div className="mt-[30px] sm:px-[40px]">
+          <h1 className="text-[24px] sm:text-[40px] font-bold font-Montserrat">
             Lorem Ipsum is simply dummy text of the printing.
           </h1>
-          <p className="mt-[10px] text-[18px] font-Montserrat font-[300] opacity-70 leading-[27px]">
+          <p className="mt-[10px] text-[14px] sm:text-[18px] font-Montserrat font-[300] opacity-70 leading-[27px]">
             Lorem Ipsum is simply dummy text of the printing and typesetting
             industry. Lorem Ipsum has been the industry's standard dummy text
             ever since the 1500s, when an unknown printer took a galley of type

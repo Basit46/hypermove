@@ -8,9 +8,11 @@ import { useNavigate } from "react-router-dom";
 const Blog = () => {
   return (
     <div className="blog-page min-h-screen mt-[150px] mb-[100px]">
-      <div>
-        <p className="uppercase font-[600] text-[32px] text-center">Blog</p>
-        <p className="uppercase text-[14px] text-center">
+      <div className="px-[20px]">
+        <p className="uppercase font-[600] text-[24px] sm:text-[32px] text-center">
+          Blog
+        </p>
+        <p className="uppercase rext-[12px] sm:text-[14px] text-center">
           Discover the latest in crypto and play-to-earn gaming
         </p>
       </div>
@@ -30,21 +32,21 @@ const Blog = () => {
             <div className="h-full w-[114px] grid place-items-center font-Montserrat font-medium text-[14px]">
               TAB2
             </div>
-            <div className="h-full w-[114px] grid place-items-center font-Montserrat font-medium text-[14px]">
+            <div className="h-full w-[114px] hidden md:grid place-items-center font-Montserrat font-medium text-[14px]">
               TAB2
             </div>
-            <div className="h-full w-[114px] grid place-items-center font-Montserrat font-medium text-[14px]">
+            <div className="h-full w-[114px] hidden md:grid place-items-center font-Montserrat font-medium text-[14px]">
               TAB2
             </div>
-            <div className="h-full w-[114px] grid place-items-center font-Montserrat font-medium text-[14px]">
+            <div className="h-full w-[114px] hidden md:grid place-items-center font-Montserrat font-medium text-[14px]">
               TAB2
             </div>
-            <div className="h-full w-[114px] grid place-items-center font-Montserrat font-medium text-[14px]">
+            <div className="h-full w-[114px] hidden md:grid place-items-center font-Montserrat font-medium text-[14px]">
               TAB2
             </div>
           </div>
 
-          <div className="relative z-[2] mt-[30px] flex flex-wrap justify-center gap-[20px]">
+          <div className="relative z-[2] mt-[30px] flex flex-wrap justify-center gap-[20px] px-[20px]">
             <Article />
             <Article />
             <Article />
@@ -57,7 +59,7 @@ const Blog = () => {
         </div>
 
         <img
-          className="absolute top-[17px] left-0 w-full"
+          className="absolute top-[6px] sm:top-[17px] left-0 w-full"
           src={gradient}
           alt="gradient"
         />
@@ -76,14 +78,22 @@ export const Article = ({ large }) => {
       onClick={() => navigate("/article/1")}
       className={`article ${
         large
-          ? "article-clip2 w-[508px] h-[395px]"
-          : "article-clip1 w-[330px] h-[452px]"
+          ? "article-clip2 hidden md:flex w-[508px] h-[395px]"
+          : "article-clip1 w-full md:w-[330px] h-[452px]"
       }  rounded-[20px] cursor-pointer p-[10px] flex flex-col`}
     >
       {large ? (
-        <img className="w-full h-[210px]" src={articleImg2} alt="article" />
+        <img
+          className="w-full h-fit md:h-[210px]"
+          src={articleImg2}
+          alt="article"
+        />
       ) : (
-        <img className="w-full h-[210px]" src={articleImg} alt="article" />
+        <img
+          className="w-full h-fit md:h-[210px]"
+          src={articleImg}
+          alt="article"
+        />
       )}
       <div className="mt-[20px] flex flex-col">
         <div className="mb-[5px] w-fit px-[16px] py-[4px] rounded-[8px] bg-[#8062FF21] text-[12px] text-white text-opacity-50">
