@@ -10,6 +10,7 @@ import PrivacyPolicy from "./pages/PrivacyPolicy";
 import Weapons from "./pages/Weapons";
 import Story from "./pages/Story";
 import GameModes from "./pages/GameModes";
+import Tournament from "./pages/Tournament";
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
         <Route path="/weapons" element={<Weapons />} />
         <Route path="/story" element={<Story />} />
         <Route path="/gamemodes" element={<GameModes />} />
+        <Route path="/tournament" element={<Tournament />} />
       </Routes>
       <Footer />
     </div>

@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 const Footer = () => {
   const links = [
     { name: "The game", link: "/gamemodes" },
-    { name: "Tournament", link: "/" },
+    { name: "Tournament", link: "/tournament" },
     { name: "Story", link: "/story" },
     { name: "Variant and Weapons", link: "/weapons" },
     { name: "Blogs", link: "/blog" },
