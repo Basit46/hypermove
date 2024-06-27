@@ -87,7 +87,7 @@ const Tournament = () => {
         <img className="absolute top-[480px] right-0" src={light} alt="light" />
       </div>
 
-      <div className="flex flex-col items-center xl:flex-row">
+      <div className="flex flex-col items-center xl:flex-row xl:items-start">
         <div className="flex flex-col items-end">
           <h1 className="mr-[60px] font-[PilatExtended-Heavy] text-[16px] vsm:text-[20px] md:text-[32px]">
             LIVE
@@ -99,7 +99,7 @@ const Tournament = () => {
           />
         </div>
 
-        <div className="flex-1 xl:pr-[60px] px-[20px] md:px-[40px] xmd:px-[60px]">
+        <div className="flex-1  px-[20px] md:px-0">
           <h1 className="font-[PilatExtended-Bold] text-center xl:text-left text-[14px] vsm:text-[20px] sm:text-[24px] cursor-pointer">
             <span
               onClick={() => setState(true)}
@@ -115,9 +115,9 @@ const Tournament = () => {
               SCHEDULE
             </span>
           </h1>
-          <div className="mt-[20px] ">
+          <div className="">
             {state ? (
-              <div className="w-full h-fit justify-center grid grid-cols-2 xl:grid-cols-4 gap-x-0 xl:gap-x-[25px]">
+              <div className="mt-[20px] pr-0 vsm:pr-[30px] w-full h-fit justify-center grid grid-cols-2 xl:grid-cols-4 gap-x-0 ">
                 <Box1 />
                 <Box1 />
                 <Box2 />
@@ -128,7 +128,7 @@ const Tournament = () => {
                 <Box3 />
               </div>
             ) : (
-              <div className="w-full h-fit">
+              <div className="mt-[20px] w-full h-fit">
                 <img src={calendar} alt="calendar" />
               </div>
             )}
@@ -179,7 +179,7 @@ const Box3 = () => {
 
 const Box4 = () => {
   return (
-    <div className="box1 relative size-[172px]">
+    <div className="box1 relative size-[148px] vsm:size-[172px]">
       <img
         className="absolute top-0 left-0 w-full h-full"
         src={tmBox1}
