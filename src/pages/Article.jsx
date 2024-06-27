@@ -7,7 +7,7 @@ const Article = () => {
   const navigate = useNavigate();
 
   return (
-    <div className=" min-h-screen mt-[120px] sm:mt-[150px] mb-[100px] px-[20px] sm:px-[40px] xmd:px-[60px]">
+    <div className="page">
       <div
         onClick={() => navigate(-1)}
         className="border-b border-b-white border-opacity-10 cursor-pointer pb-[20px] mx-[20px] flex gap-[10px] items-center"
