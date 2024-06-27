@@ -17,12 +17,12 @@ const items = [
 
 const Story = () => {
   return (
-    <div className="story-page min-h-screen mt-[100px] sm:mt-[150px] mb-[100px]">
+    <div className="story-page h-fit mt-[100px] sm:mt-[150px] mb-[100px]">
       <h1 className="text-[24px] ml-[200px] font-[PilatExtended-DemiBold]">
         STORY
       </h1>
-      <div className="w-full flex">
-        <div className="relative w-[60%] h-[500px]">
+      <div className="w-full xl:flex">
+        <div className="relative w-full xl:w-[60%] h-[500px]">
           <div className="h-fit ml-auto w-fit relative grid place-items-center">
             <img src={bg1} alt="background" />
             <p className="absolute top-[42%] text-[14px] font-medium font-Montserrat">
@@ -58,18 +58,20 @@ const Story = () => {
           />
         </div>
 
-        <div className="flex-1 h-[400px]">
-          {items.map((item, i) => (
-            <div
-              key={i}
-              className="group mb-[10px] flex items-center gap-[10px] cursor-pointer"
-            >
-              <div className="hidden group-hover:block w-[17px] h-0 border-y-[0.5px] border-white"></div>
-              <p className="question uppercase">{item}</p>
-            </div>
-          ))}
+        <div className="mt-[50px] px-[20px] md:px-0 xl:mt-0 flex-1 h-fit xl:h-[400px] flex flex-col  ju justify-center items-center">
+          <div>
+            {items.map((item, i) => (
+              <div
+                key={i}
+                className="group mb-[10px] flex items-center gap-[10px] cursor-pointer"
+              >
+                <div className="hidden group-hover:block w-[17px] h-0 border-y-[0.5px] border-white"></div>
+                <p className="question uppercase">{item}</p>
+              </div>
+            ))}
+          </div>
 
-          <img className="w-full h-fit" src={bg4} alt="story" />
+          <img className="" src={bg4} alt="story" />
         </div>
       </div>
     </div>
