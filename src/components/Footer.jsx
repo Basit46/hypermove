@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 const Footer = () => {
   const links = [
-    { name: "The game", link: "/" },
+    { name: "The game", link: "/gamemodes" },
     { name: "Tournament", link: "/" },
     { name: "Story", link: "/story" },
     { name: "Variant and Weapons", link: "/weapons" },
