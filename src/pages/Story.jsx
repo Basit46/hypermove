@@ -58,7 +58,7 @@ const Story = () => {
           />
         </div>
 
-        <div className="mt-[50px] px-[20px] md:px-0 xl:mt-0 flex-1 h-fit xl:h-[400px] flex flex-col  ju justify-center items-center">
+        <div className="mt-[50px] px-[20px] md:px-0 xl:mt-0 flex-1 h-fit xl:h-[400px] flex flex-col  items-center">
           <div>
             {items.map((item, i) => (
               <div
