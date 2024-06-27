@@ -7,6 +7,7 @@ import MobileMenu from "./components/MobileMenu";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
+import Weapons from "./pages/Weapons";
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
         <Route path="/blog" element={<Blog />} />
         <Route path="/article/:id" element={<Article />} />
         <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+        <Route path="/weapons" element={<Weapons />} />
       </Routes>
       <Footer />
     </div>
