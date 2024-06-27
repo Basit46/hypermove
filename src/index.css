@@ -56,6 +56,24 @@
   .token .token-box p {
     @apply text-[11px] vsm:text-[14px] opacity-70;
   }
+
+  .story-page .question {
+    background: linear-gradient(
+      90deg,
+      #ffffff 0%,
+      rgba(153, 153, 153, 0) 98.73%
+    );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    @apply w-fit bg-transparent opacity-50 hover:opacity-100;
+  }
+  .story-page .question:hover {
+    background: none;
+    -webkit-background-clip: none;
+    -webkit-text-fill-color: white;
+    color: white;
+    @apply w-fit bg-transparent hover:bg-none opacity-50 hover:opacity-100;
+  }
 }
 
 @layer utilities {

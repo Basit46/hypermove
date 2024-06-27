@@ -8,6 +8,7 @@ import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
 import Weapons from "./pages/Weapons";
+import Story from "./pages/Story";
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
         <Route path="/article/:id" element={<Article />} />
         <Route path="/privacy-policy" element={<PrivacyPolicy />} />
         <Route path="/weapons" element={<Weapons />} />
+        <Route path="/story" element={<Story />} />
       </Routes>
       <Footer />
     </div>

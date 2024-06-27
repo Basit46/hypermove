@@ -5,7 +5,7 @@ const Footer = () => {
   const links = [
     { name: "The game", link: "/" },
     { name: "Tournament", link: "/" },
-    { name: "Story", link: "/" },
+    { name: "Story", link: "/story" },
     { name: "Variant and Weapons", link: "/weapons" },
     { name: "Blogs", link: "/blog" },
     { name: "Privacy Policy", link: "/privacy-policy" },
