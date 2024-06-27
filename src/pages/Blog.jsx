@@ -7,12 +7,12 @@ import { useNavigate } from "react-router-dom";
 
 const Blog = () => {
   return (
-    <div className="blog-page min-h-screen mt-[120px] sm:mt-[150px] mb-[100px]">
+    <div className="blog-page min-h-screen mt-[100px] sm:mt-[150px] mb-[100px]">
       <div className="px-[20px]">
         <p className="uppercase font-[600] text-[24px] sm:text-[32px] text-center">
           Blog
         </p>
-        <p className="uppercase rext-[12px] sm:text-[14px] text-center">
+        <p className="uppercase text-[10px] vsm:text-[14px] text-center">
           Discover the latest in crypto and play-to-earn gaming
         </p>
       </div>

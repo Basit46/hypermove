@@ -8,7 +8,7 @@ const Footer = () => {
     { name: "Story", link: "/" },
     { name: "Variant and Weapons", link: "/" },
     { name: "Blogs", link: "/blog" },
-    { name: "Privacy Policy", link: "/" },
+    { name: "Privacy Policy", link: "/privacy-policy" },
     { name: "About Us", link: "/" },
   ];
   return (
@@ -22,7 +22,7 @@ const Footer = () => {
               className="flex items-center gap-[5px] md:gap-[20px] group"
             >
               <div className="hidden mt-[5px] group-hover:block h-[8px] md:h-[10px] w-[20px] md:w-[25px] bg-white"></div>
-              <p className="uppercase font-[PilatExtended-Bold] text-[14px] vsm:text-[20px] xmd:text-[32px] leading-[1] text-white">
+              <p className="uppercase font-[PilatExtended-Bold] text-[14px] tracking-[1.2px] vsm:text-[20px] xmd:text-[32px] leading-[1] text-white">
                 {link.name}
               </p>
             </Link>

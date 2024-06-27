@@ -5,15 +5,23 @@ import dark_icon from "../assets/dark_icon.svg";
 import { useTheme } from "../context/ThemeContext";
 import menu from "../assets/menuIcon.svg";
 import { FaTimes } from "react-icons/fa";
+import { useNavigate } from "react-router-dom";
 
 const Navbar = () => {
   const { theme, setTheme, isNavOpen, setIsNavOpen } = useTheme();
+  const navigate = useNavigate();
+
   return (
     <div
       id="navbar"
       className="navbar z-[50] absolute top-0 bg-transparent w-full px-[20px] sm:px-[40px] xmd:px-[60px] py-[20px] flex justify-between items-center"
     >
-      <img className="h-[29px] vsm:h-fit" src={logo} alt="logo" />
+      <img
+        onClick={() => navigate("/")}
+        className="h-[29px] vsm:h-fit"
+        src={logo}
+        alt="logo"
+      />
 
       <nav className="hidden lg:flex gap-[20px] items-center">
         <p className="active">HOME</p>

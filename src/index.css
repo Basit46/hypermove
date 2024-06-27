@@ -6,7 +6,7 @@
 
 @layer components {
   .page {
-    @apply min-h-screen mt-[120px] sm:mt-[150px] mb-[100px] px-[20px] sm:px-[40px] xmd:px-[60px];
+    @apply min-h-screen mt-[100px] sm:mt-[150px] mb-[100px] px-[20px] sm:px-[40px] xmd:px-[60px];
   }
 
   nav p {
