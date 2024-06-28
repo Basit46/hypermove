@@ -1,13 +1,15 @@
 import React from "react";
-
 import heroBg from "../assets/hero_bg.png";
 import part1 from "../assets/hero-part1.png";
 import part2 from "../assets/hero-part2.png";
 import part3 from "../assets/hero-part3.png";
 import herobg1 from "../assets/hero-bg1.svg";
 import herobg2 from "../assets/hero-bg2.svg";
+import { useNavigate } from "react-router-dom";
 
 const Hero = () => {
+  const navigate = useNavigate();
+
   return (
     <div className="relative w-full bg-[#000513] dark:black">
       <img className="absolute top-0 left-0" src={heroBg} alt="game demo" />
@@ -49,12 +51,15 @@ const Hero = () => {
           <img src={herobg1} alt="bg" />
         </div>
 
-        <div className="w-[140px] vsm:w-fit relative grid place-items-center">
+        <button
+          onClick={() => navigate("/download")}
+          className="w-[140px] vsm:w-fit relative grid place-items-center"
+        >
           <p className="absolute top-1/2 -translate-y-1/2 font-[600] text-[14px] vsm:text-base font-Montserrat text-white">
             Download Game
           </p>
           <img src={herobg2} alt="bg" />
-        </div>
+        </button>
       </div>
 
       <div className="absolute bottom-[-50px] left-0 z-[-1] w-full h-[60px] gr bg-gradient-to-b from-black to-transparent"></div>

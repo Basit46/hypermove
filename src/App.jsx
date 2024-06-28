@@ -12,6 +12,7 @@ import Story from "./pages/Story";
 import GameModes from "./pages/GameModes";
 import Tournament from "./pages/Tournament";
 import ScrollTop from "./components/ScrollTop";
+import Download from "./pages/Download";
 
 function App() {
   return (
@@ -27,6 +28,7 @@ function App() {
         <Route path="/story" element={<Story />} />
         <Route path="/gamemodes" element={<GameModes />} />
         <Route path="/tournament" element={<Tournament />} />
+        <Route path="/download" element={<Download />} />
       </Routes>
 
       <ScrollTop />
