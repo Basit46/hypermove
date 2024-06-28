@@ -57,6 +57,44 @@ const Download = () => {
         />
       </div>
 
+      {/* Responsive */}
+      <div className="block lg:hidden w-full">
+        <div className="relative">
+          <div className="res w-full h-[316px]">
+            <img
+              className="w-full h-full object-cover"
+              src={list[currImg]}
+              alt="download preview"
+            />
+          </div>
+
+          <img
+            onClick={handleNext}
+            className="absolute left-[-70px] bottom-[0px]"
+            src={arrow}
+            alt="arrow"
+          />
+        </div>
+
+        <div className="mt-[20px] flex justify-center gap-[10px]">
+          <div
+            className={`${
+              currImg != 0 && "bg-opacity-20"
+            } w-[67px] h-[3px] bg-white`}
+          />
+          <div
+            className={`${
+              currImg != 1 && "bg-opacity-20"
+            } w-[67px] h-[3px] bg-white`}
+          />
+          <div
+            className={`${
+              currImg != 2 && "bg-opacity-20"
+            } w-[67px] h-[3px] bg-white`}
+          />
+        </div>
+      </div>
+
       <div className="mt-[70px] lg:px-[60px] flex flex-col lg:flex-row justify-between gap-[50px] sm:gap-[100px]">
         <div className="w-full md:w-[50%]">
           <h1 className="text-[20px] font-[PilatExtended-DemiBold]">
