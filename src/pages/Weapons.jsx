@@ -7,6 +7,8 @@ import bg from "../assets/variantBg.png";
 import star1 from "../assets/star1.png";
 import star2 from "../assets/star2.png";
 import star3 from "../assets/star3.png";
+import arrow1 from "../assets/feat-arrow1.png";
+import arrow2 from "../assets/feat-arrow2.svg";
 
 const Weapons = () => {
   const [state, setState] = useState(true);
@@ -52,21 +54,15 @@ const Weapons = () => {
         </div>
       ) : (
         <div className="mt-[30px] sm:mt-[80px] relative min-h-[400px] flex flex-col">
-          <img
-            className="absolute left-0 bottom-[-8px] w-full"
-            src={bg}
-            alt="gradient"
-          />
-
           <div className="flex-1 relative z-[2]">
-            <div className="px-[60px] flex justify-center">
+            <div className="px-[20px] xmd:px-[60px] flex justify-center">
               <img
                 className="opacity-20"
                 src={getImageSrc(2)}
                 alt="super hero"
               />
               <img
-                className="mx-[-800px] scale-[1.5]"
+                className="mx-[-200px] sm:mx-[-300px] xmd:mx-[-600px] xl:mx-[-800px] scale-[1.5]"
                 src={getImageSrc(0)}
                 alt="super hero"
               />
@@ -76,10 +72,13 @@ const Weapons = () => {
                 alt="super hero"
               />
             </div>
-            <div className="absolute bottom-0 px-[60px] w-full h-full flex flex-col justify-between">
-              <div>arrow</div>
+            <div className="absolute bottom-0 pt-0 md:pt-[40px] px-[0px] xmd:px-[60px] w-full h-full flex flex-col justify-between">
+              <div className="flex justify-between items-center">
+                <img src={arrow1} alt="arrow" />
+                <img src={arrow2} alt="arrow" />
+              </div>
 
-              <div className="flex justify-between items-end">
+              <div className="hidden lg:flex justify-between items-end">
                 <div className="w-[30%] uppercase">
                   <div>
                     <h3 className="text-[18px]">ROLE</h3>
@@ -111,11 +110,54 @@ const Weapons = () => {
                 <div className="hero-blur w-[35%] h-[377px] backdrop-blur-[20px] "></div>
               </div>
             </div>
-
-            <div className="absolute bottom-[-47px] bg-[#00FFD1] left-1/2 -translate-x-1/2 h-[2px] w-[20%]"></div>
           </div>
 
-          <img src={line} alt="line" />
+          <div className="relative">
+            <img
+              className="absolute left-0 bottom-[-4px] sm:bottom-[-6px] w-full"
+              src={bg}
+              alt="gradient"
+            />
+            <div className="absolute bottom-[6px] sm:bottom-[20px] bg-[#00FFD1] left-1/2 -translate-x-1/2 h-[2px] w-[15%]" />
+            <img className="" src={line} alt="line" />
+          </div>
+
+          <div className="mt-[50px] px-[20px] xmd:px-[40px] flex lg:hidden flex-col gap-[40px] justify-between items-end">
+            <div className="uppercase">
+              <div>
+                <h3 className="text-[18px]">ROLE</h3>
+                <p className="bg-hero-gradient clip-text text-[24px] font-[PilatExtended-Heavy]">
+                  TECHSAVANT
+                </p>
+              </div>
+
+              <div className="my-[15px]">
+                <h3 className="text-[18px] font-[PilatExtended-Bold]">
+                  Jetpack
+                </h3>
+                <p className="text-[14px] opacity-70">
+                  Jets on his back allows him to fly for certain distances.
+                </p>
+              </div>
+
+              <div>
+                <h3 className="text-[18px] font-[PilatExtended-Bold]">
+                  RECON SCAN
+                </h3>
+                <p className="text-[14px] opacity-70">
+                  Triggers two scanning waves, releasing pulses that penetrate
+                  walls and briefly highlight enemies.
+                </p>
+              </div>
+            </div>
+
+            <div className="w-full">
+              <h1 className="text-[12px] vsm:text-[16px] font-medium pl-[40px]">
+                TRAILER
+              </h1>
+              <div className="mt-[-16px] hero-blur w-full h-[377px] backdrop-blur-[20px]"></div>
+            </div>
+          </div>
         </div>
       )}
     </div>
