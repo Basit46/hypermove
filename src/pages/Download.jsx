@@ -19,7 +19,7 @@ const Download = () => {
 
   return (
     <div className="page download-page">
-      <h1 className="text-center text-[48px] font-[PilatExtended-Bold]">
+      <h1 className="text-center text-[24px] vsm:text-[48px] font-[PilatExtended-Bold] uppercase">
         Download
       </h1>
 
