@@ -23,7 +23,7 @@ const Download = () => {
         Download
       </h1>
 
-      <div className="w-full relative px-[60px]">
+      <div className="hidden lg:block w-full relative px-[60px]">
         <div className="main relative mt-[40px] h-[587px] w-full">
           <img
             className="w-full h-full object-cover"
@@ -57,8 +57,8 @@ const Download = () => {
         />
       </div>
 
-      <div className="mt-[70px] px-[60px] flex justify-between gap-[100px]">
-        <div className="w-[50%]">
+      <div className="mt-[70px] lg:px-[60px] flex flex-col lg:flex-row justify-between gap-[50px] sm:gap-[100px]">
+        <div className="w-full md:w-[50%]">
           <h1 className="text-[20px] font-[PilatExtended-DemiBold]">
             About Game
           </h1>
@@ -76,9 +76,9 @@ const Download = () => {
           </p>
         </div>
 
-        <div className="flex-1 min-h-[200px] flex justify-between">
+        <div className="flex-1 flex flex-col items-center sm:items-start gap-[30px] sm:gap-0 sm:flex-row justify-between">
           <div>
-            <h1 className="mb-[20px] text-[20px] opacity-70 font-[PilatExtended-Bold]">
+            <h1 className="mb-[20px] text-center sm:text-left text-[20px] opacity-70 font-[PilatExtended-Bold]">
               Download
             </h1>
 
@@ -90,15 +90,17 @@ const Download = () => {
               />
               Windows
             </button>
-            <p className="mt-[10px] text-[12px] opacity-70">Version 2.6</p>
+            <p className="mt-[10px] text-center sm:text-left text-[12px] opacity-70">
+              Version 2.6
+            </p>
           </div>
 
           <div className="">
-            <h1 className="mb-[20px] text-[20px] opacity-70 font-[PilatExtended-Bold]">
+            <h1 className="mb-[20px] text-center sm:text-left text-[20px] opacity-70 font-[PilatExtended-Bold]">
               Coming soon
             </h1>
 
-            <div className="w-fit flex flex-col gap-[10px]">
+            <div className="w-fit flex flex-wrap sm:flex-nowrap justify-center sm:justify-start sm:flex-col gap-[10px]">
               <button className="relative hover:bg-download-btn-gradient w-[161px] h-[54px] text-[16px] font-[600] font-Montserrat">
                 <img
                   className="absolute top-0 left-0 w-full h-full"
