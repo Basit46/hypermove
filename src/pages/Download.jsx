@@ -1,5 +1,5 @@
 import React from "react";
-import downloadBg from "../assets/downloadBg.svg";
+import frame from "../assets/downBtnFrame.svg";
 import downImg1 from "../assets/downImg1.png";
 import downImg2 from "../assets/downImg2.jpg";
 import downImg3 from "../assets/downImg3.png";
@@ -66,11 +66,53 @@ const Download = () => {
 
         <div className="flex-1 min-h-[200px] flex justify-between">
           <div>
-            <h1 className="text-[20px] opacity-70 font-[PilatExtended-Bold]">
+            <h1 className="mb-[20px] text-[20px] opacity-70 font-[PilatExtended-Bold]">
               Download
             </h1>
+
+            <button className="relative hover:bg-download-btn-gradient w-[161px] h-[54px] text-[16px] font-[600] font-Montserrat">
+              <img
+                className="absolute top-0 left-0 w-full h-full"
+                src={frame}
+                alt="frame"
+              />
+              Windows
+            </button>
+            <p className="mt-[10px] text-[12px] opacity-70">Version 2.6</p>
           </div>
-          <div></div>
+
+          <div className="">
+            <h1 className="mb-[20px] text-[20px] opacity-70 font-[PilatExtended-Bold]">
+              Coming soon
+            </h1>
+
+            <div className="w-fit flex flex-col gap-[10px]">
+              <button className="relative hover:bg-download-btn-gradient w-[161px] h-[54px] text-[16px] font-[600] font-Montserrat">
+                <img
+                  className="absolute top-0 left-0 w-full h-full"
+                  src={frame}
+                  alt="frame"
+                />
+                Mac OS
+              </button>
+              <button className="relative hover:bg-download-btn-gradient w-[161px] h-[54px] text-[16px] font-[600] font-Montserrat">
+                <img
+                  className="absolute top-0 left-0 w-full h-full"
+                  src={frame}
+                  alt="frame"
+                />
+                IOS
+              </button>
+              <button className="relative hover:bg-download-btn-gradient w-[161px] h-[54px] text-[16px] font-[600] font-Montserrat">
+                <img
+                  className="absolute top-0 left-0 w-full h-full"
+                  src={frame}
+                  alt="frame"
+                />
+                Android
+              </button>
+            </div>
+          </div>
         </div>
       </div>
     </div>

@@ -20,6 +20,8 @@ export default {
         "article-gradient":
           "linear-gradient(266.72deg, #5629EA -5.79%, #00FFD1 115.6%)",
         "hero-gradient": "linear-gradient(90deg, #00FFD1 0%, #8062FF 100%)",
+        "download-btn-gradient":
+          "linear-gradient(270deg, #00FFD1 -17.39%, #4723C0 64.6%)",
       },
     },
   },
