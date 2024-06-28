@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import frame from "../assets/downBtnFrame.svg";
 import downImg1 from "../assets/downImg1.png";
 import downImg2 from "../assets/downImg2.jpg";
@@ -6,6 +6,17 @@ import downImg3 from "../assets/downImg3.png";
 import arrow from "../assets/downloadArrow.png";
 
 const Download = () => {
+  const list = [downImg1, downImg2, downImg3];
+  const [currImg, setCurrImg] = useState(0);
+
+  const handleNext = () => {
+    if (currImg >= list.length - 1) {
+      setCurrImg(0);
+    } else {
+      setCurrImg((prev) => prev + 1);
+    }
+  };
+
   return (
     <div className="page download-page">
       <h1 className="text-center text-[48px] font-[PilatExtended-Bold]">
@@ -16,7 +27,7 @@ const Download = () => {
         <div className="main relative mt-[40px] h-[587px] w-full">
           <img
             className="w-full h-full object-cover"
-            src={downImg1}
+            src={list[currImg]}
             alt="download preview"
           />
         </div>
@@ -25,20 +36,21 @@ const Download = () => {
           <div className="sec1 h-[188px] w-[211px]">
             <img
               className="h-full w-full object-cover"
-              src={downImg2}
+              src={list[(currImg + 1) % 3]}
               alt="download preview"
             />
           </div>
           <div className="sec2 mt-[-37px] h-[188px] w-[211px]">
             <img
               className="h-full w-full object-cover"
-              src={downImg3}
+              src={list[(currImg + 2) % 3]}
               alt="download preview"
             />
           </div>
         </div>
 
         <img
+          onClick={handleNext}
           className="absolute left-[120px] top-[370px]"
           src={arrow}
           alt="arrow"
