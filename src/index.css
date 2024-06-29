@@ -74,6 +74,28 @@
     color: white;
     @apply w-fit bg-transparent hover:bg-none opacity-50 hover:opacity-100;
   }
+
+  .roadmap .item {
+    @apply w-[23%] relative;
+  }
+  .roadmap .item .top {
+    @apply relative w-[104px] h-[34px] bg-[#FFFFFF0D] rounded-[31px] overflow-hidden grid place-items-center;
+  }
+  .roadmap .item .top div {
+    @apply absolute top-0 left-0 h-full bg-hero-gradient;
+  }
+  .roadmap .item .bottom {
+    @apply mt-[10px] flex gap-[10px];
+  }
+  .roadmap .item .bottom > div {
+    @apply relative h-[126px] w-[2px] rounded-[20px] overflow-hidden bg-[#999999]/10;
+  }
+  .roadmap .item .bottom > div > div {
+    @apply absolute top-0 left-0 w-full bg-hero-gradient;
+  }
+  .roadmap .item li {
+    @apply text-[12px] font-[PilatExtended-Light];
+  }
 }
 
 @layer utilities {

@@ -8,6 +8,7 @@ import aboutImg5 from "../assets/aboutImg5.svg";
 import line from "../assets/aboutLine.svg";
 import latern from "../assets/aboutMainImg.png";
 import gradient from "../assets/aboutGradient.png";
+import Roadmap from "../components/Roadmap";
 
 const About = () => {
   return (
@@ -131,7 +132,9 @@ const About = () => {
             src={gradient}
             alt="gradient"
           />
-          <img className="w-full " src={line} alt="line" />
+          <img className="w-full" src={line} alt="line" />
+
+          <Roadmap />
         </div>
       </div>
     </div>
