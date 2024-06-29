@@ -9,7 +9,7 @@ const Footer = () => {
     { name: "Variant and Weapons", link: "/weapons" },
     { name: "Blogs", link: "/blog" },
     { name: "Privacy Policy", link: "/privacy-policy" },
-    { name: "About Us", link: "/" },
+    { name: "About Us", link: "/about" },
   ];
   return (
     <div className="relative mt-[50px] px-[20px] sm:px-[40px] xmd:px-[60px] w-full mb-[50px]">

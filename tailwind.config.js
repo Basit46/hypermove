@@ -22,6 +22,8 @@ export default {
         "hero-gradient": "linear-gradient(90deg, #00FFD1 0%, #8062FF 100%)",
         "download-btn-gradient":
           "linear-gradient(270deg, #00FFD1 -17.39%, #4723C0 64.6%)",
+        "about-page-gradient":
+          "linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, #000513 66.57%)",
       },
     },
   },
