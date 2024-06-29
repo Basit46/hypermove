@@ -4,6 +4,9 @@ import aboutImg1 from "../assets/aboutImg1.svg";
 import aboutImg2 from "../assets/aboutImg2.png";
 import aboutImg3 from "../assets/aboutImg3.png";
 import aboutImg4 from "../assets/aboutImg4.png";
+import aboutImg5 from "../assets/aboutImg5.svg";
+import line from "../assets/aboutLine.svg";
+import latern from "../assets/aboutMainImg.png";
 
 const About = () => {
   return (
@@ -66,9 +69,103 @@ const About = () => {
             </p>
           </div>
         </div>
+
+        <div className="relative my-[50px]">
+          <img className="w-full " src={line} alt="line" />
+          <div className="bg-[#000513] absolute top-[-5px] right-[400px] px-[10px] py-[1px] text-[24px]">
+            FEATURES
+          </div>
+        </div>
+
+        <div className="h-fit px-[20px] sm:px-[40px] flex gap-[30px]">
+          <div className="w-[75%] flex flex-col">
+            {list.map((item, i) => (
+              <div
+                key={i}
+                className="py-[20px] border-b border-white border-opacity-10 h-fit flex justify-between"
+              >
+                <div className="flex gap-[10px] items-center">
+                  <img src={aboutImg5} alt="desc" />
+                  <p className="text-[14px] uppercase">{item.text1}</p>
+                </div>
+
+                <p className="w-[48%] text-end uppercase text-[14px] opacity-75">
+                  {item.text2}
+                </p>
+              </div>
+            ))}
+          </div>
+
+          <div className="features-box flex-1 h-[638px]"></div>
+        </div>
+
+        <div className="relative my-[70px]">
+          <img className="mx-auto" src={latern} alt="latern" />
+          <div className="absolute left-0 top-0 w-full h-full flex flex-col items-center justify-center gap-[30px]">
+            <div className="w-full px-[200px] flex justify-between items-center">
+              <Shape1 />
+              <Shape1 />
+            </div>
+            <div className="w-full px-[80px] flex justify-between items-center">
+              <Shape1 />
+              <Shape1 />
+            </div>
+            <div className="w-full px-[200px] flex justify-between items-center">
+              <Shape1 />
+              <Shape1 />
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   );
 };
 
 export default About;
+
+const Shape1 = () => {
+  return (
+    <div className="shape1 w-[409px] h-[217px] px-[20px] pt-[20px] flex flex-col gap-[10px] items-end ">
+      <div className="size-[38px] rounded-full bg-hero-gradient" />
+      <h1 className="text-[18px] clip-text bg-hero-gradient font-[PilatExtended-Bold] uppercase leading-[1.1] text-end">
+        Personalized Information Gathering
+      </h1>
+      <p className="font-[PilatExtended-Light] text-[10px] text-end">
+        Hypermove employs player data gathering to personalize NPC interactions
+        and experiences, fostering tailored gameplay encounters
+      </p>
+    </div>
+  );
+};
+
+const list = [
+  {
+    text1: "Anti-Cheat Mechanisms",
+    text2:
+      "Advanced algorithms monitor activities & analyze analyzing various in-game data points to detect cheating.",
+  },
+  {
+    text1: "Accessibility",
+    text2: "Free for All, Playable on PC.",
+  },
+  {
+    text1: "Game Genre",
+    text2:
+      "Hypermove Games is a 5v5 tactical based shooting game offering an immersive gaming experience.",
+  },
+  {
+    text1: "Esports",
+    text2:
+      "Hypermove aims to revolutionize competitive gaming with a focus on fairness, skill, and integrity.",
+  },
+  {
+    text1: "Utilisation of AI",
+    text2:
+      "Hypermove stands at the forefront by utilising Artificial Intelligence in every possible aspects within the ecosystem.",
+  },
+  {
+    text1: "Simplified Onboarding",
+    text2:
+      "Hypermove Games simplifies onboarding with account abstraction, making blockchain interactions easy.",
+  },
+];
