@@ -7,6 +7,7 @@ import aboutImg4 from "../assets/aboutImg4.png";
 import aboutImg5 from "../assets/aboutImg5.svg";
 import line from "../assets/aboutLine.svg";
 import latern from "../assets/aboutMainImg.png";
+import gradient from "../assets/aboutGradient.png";
 
 const About = () => {
   return (
@@ -99,22 +100,38 @@ const About = () => {
           <div className="features-box flex-1 h-[638px]"></div>
         </div>
 
-        <div className="relative my-[70px]">
+        <div className="relative mt-[70px]">
           <img className="mx-auto" src={latern} alt="latern" />
           <div className="absolute left-0 top-0 w-full h-full flex flex-col items-center justify-center gap-[30px]">
             <div className="w-full px-[200px] flex justify-between items-center">
-              <Shape1 />
-              <Shape1 />
+              <Shape1
+                text1="Personalized Information Gathering"
+                text2="Hypermove employs player data gathering to personalize NPC interactions
+        and experiences, fostering tailored gameplay encounters"
+              />
+              <Shape2 />
             </div>
             <div className="w-full px-[80px] flex justify-between items-center">
-              <Shape1 />
-              <Shape1 />
+              <Shape3 />
+              <Shape4 />
             </div>
             <div className="w-full px-[200px] flex justify-between items-center">
-              <Shape1 />
-              <Shape1 />
+              <Shape5 />
+              <Shape1
+                text1="Human-like AI Behavior:"
+                text2="Our objective is to develop non-player characters (NPCs) that exhibit human-like intelligence and adaptability, elevating the level of realism and depth within our gaming environments."
+              />
             </div>
           </div>
+        </div>
+
+        <div className="relative h-[900px] flex flex-col">
+          <img
+            className="absolute top-0 left-0 w-full "
+            src={gradient}
+            alt="gradient"
+          />
+          <img className="w-full " src={line} alt="line" />
         </div>
       </div>
     </div>
@@ -123,16 +140,75 @@ const About = () => {
 
 export default About;
 
-const Shape1 = () => {
+const Shape1 = ({ text1, text2 }) => {
   return (
-    <div className="shape1 w-[409px] h-[217px] px-[20px] pt-[20px] flex flex-col gap-[10px] items-end ">
+    <div className="shape1 w-[409px] h-[217px] backdrop-blur-[50px] px-[20px] pt-[20px] flex flex-col gap-[10px] items-end ">
       <div className="size-[38px] rounded-full bg-hero-gradient" />
       <h1 className="text-[18px] clip-text bg-hero-gradient font-[PilatExtended-Bold] uppercase leading-[1.1] text-end">
-        Personalized Information Gathering
+        {text1}
       </h1>
-      <p className="font-[PilatExtended-Light] text-[10px] text-end">
-        Hypermove employs player data gathering to personalize NPC interactions
-        and experiences, fostering tailored gameplay encounters
+      <p className="font-[PilatExtended-Light] text-[10px] text-end">{text2}</p>
+    </div>
+  );
+};
+
+const Shape2 = () => {
+  return (
+    <div className="shape2 w-[409px] h-[217px] backdrop-blur-[50px] pl-[80px] pt-[50px] flex flex-col gap-[10px]">
+      <div className="size-[38px] rounded-full bg-hero-gradient" />
+      <h1 className="text-[18px] clip-text bg-hero-gradient font-[PilatExtended-Bold] uppercase leading-[1.1]">
+        Decentralized AI
+      </h1>
+      <p className="w-[80%] font-[PilatExtended-Light] text-[10px]">
+        Integrating decentralized artificial intelligence (DeAI) allows for
+        distributed decision-making and intelligence within our gaming
+        ecosystem, enhancing game dynamics and complexity
+      </p>
+    </div>
+  );
+};
+
+const Shape3 = () => {
+  return (
+    <div className="shape3 w-[409px] h-[195px] backdrop-blur-[50px] px-[30px] pt-[30px] flex flex-col gap-[10px]">
+      <div className="size-[38px] rounded-full bg-hero-gradient" />
+      <h1 className="text-[18px] clip-text bg-hero-gradient font-[PilatExtended-Bold] uppercase leading-[1.1]">
+        AI Voices Integration
+      </h1>
+      <p className="font-[PilatExtended-Light] text-[10px]">
+        Through collaboration with ElevenLabs AI voices, Hypermove leverages
+        cutting-edge technology for character voice generation.
+      </p>
+    </div>
+  );
+};
+
+const Shape4 = () => {
+  return (
+    <div className="shape4 w-[409px] h-[195px] backdrop-blur-[50px] px-[30px] pt-[30px] flex flex-col gap-[10px]">
+      <div className="size-[38px] rounded-full bg-hero-gradient" />
+      <h1 className="text-[18px] clip-text bg-hero-gradient font-[PilatExtended-Bold] uppercase leading-[1.1]">
+        Emotion Recognition
+      </h1>
+      <p className="font-[PilatExtended-Light] text-[10px]">
+        Utilizing sophisticated algorithms, AI NPCs can recognize and respond to
+        player emotions, enriching interactions and enhancing gameplay
+        dynamics. 
+      </p>
+    </div>
+  );
+};
+
+const Shape5 = () => {
+  return (
+    <div className="shape5 w-[409px] h-[195px] backdrop-blur-[50px] px-[40px] pt-[50px] flex flex-col gap-[10px]">
+      <div className="size-[38px] rounded-full bg-hero-gradient" />
+      <h1 className="text-[18px] clip-text bg-hero-gradient font-[PilatExtended-Bold] uppercase leading-[1.1]">
+        Adaptive Behavior
+      </h1>
+      <p className="font-[PilatExtended-Light] text-[10px]">
+        AI NPCs adapt their behavior and strategies based on evolving game
+        scenarios and player actions.
       </p>
     </div>
   );
