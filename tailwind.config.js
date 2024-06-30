@@ -24,6 +24,8 @@ export default {
           "linear-gradient(270deg, #00FFD1 -17.39%, #4723C0 64.6%)",
         "about-page-gradient":
           "linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, #000513 66.57%)",
+        "faq-gradient":
+          "linear-gradient(0deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), linear-gradient(110.13deg, rgba(0, 0, 0, 0.2) 0%, rgba(153, 123, 255, 0.2) 104.21%)",
       },
     },
   },

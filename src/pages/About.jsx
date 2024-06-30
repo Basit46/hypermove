@@ -11,6 +11,7 @@ import gradient from "../assets/aboutGradient.png";
 import Roadmap from "../components/Roadmap";
 import AboutToken from "../components/AboutToken";
 import Team from "../components/Team";
+import FAQ from "../components/FAQ";
 
 const About = () => {
   return (
@@ -142,6 +143,8 @@ const About = () => {
         <AboutToken />
 
         <Team />
+
+        <FAQ />
       </div>
     </div>
   );
