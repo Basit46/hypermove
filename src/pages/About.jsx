@@ -9,6 +9,8 @@ import line from "../assets/aboutLine.svg";
 import latern from "../assets/aboutMainImg.png";
 import gradient from "../assets/aboutGradient.png";
 import Roadmap from "../components/Roadmap";
+import AboutToken from "../components/AboutToken";
+import Team from "../components/Team";
 
 const About = () => {
   return (
@@ -126,7 +128,7 @@ const About = () => {
           </div>
         </div>
 
-        <div className="relative h-[900px] flex flex-col">
+        <div className="relative h-fit flex flex-col">
           <img
             className="absolute top-0 left-0 w-full "
             src={gradient}
@@ -136,6 +138,10 @@ const About = () => {
 
           <Roadmap />
         </div>
+
+        <AboutToken />
+
+        <Team />
       </div>
     </div>
   );
