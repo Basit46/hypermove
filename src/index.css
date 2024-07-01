@@ -76,13 +76,16 @@
   }
 
   .roadmap .item {
-    @apply w-[23%] relative;
+    @apply w-full xmd:w-[23%] relative px-[20px];
   }
   .roadmap .item .top {
     @apply relative w-[104px] h-[34px] bg-[#FFFFFF0D] rounded-[31px] overflow-hidden grid place-items-center;
   }
-  .roadmap .item .top div {
+  .roadmap .item .top div.norm {
     @apply absolute top-0 left-0 h-full bg-hero-gradient;
+  }
+  .roadmap .item .top div.reverse {
+    @apply absolute top-0 right-0 xmd:left-0 h-full bg-hero-gradient;
   }
   .roadmap .item .bottom {
     @apply mt-[10px] flex gap-[10px];

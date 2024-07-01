@@ -12,7 +12,7 @@ import teamEllipse from "../assets/teamEllipse.png";
 const Team = () => {
   return (
     <div className="team mt-[100px] min-h-[50vh]">
-      <h1 className="text-center text-[24px] uppercase">
+      <h1 className="text-center text-[12px] vsm:text-[24px] uppercase">
         The Team Behind the Scenes
       </h1>
 
@@ -23,7 +23,7 @@ const Team = () => {
           alt="ellipse"
         />
 
-        <div className="team1 size-[20vw] grid place-items-center p-[10px] md:p-[20px]">
+        <div className="team1 size-[24vw] vsm:size-[20vw] grid place-items-center p-[10px] md:p-[20px]">
           <div className="team1 w-full h-full">
             <img
               className="w-full h-full object-cover"
@@ -33,7 +33,7 @@ const Team = () => {
           </div>
         </div>
 
-        <div className="team1 mt-[70px] size-[20vw] grid place-items-center p-[10px] md:p-[20px]">
+        <div className="team1 mt-[20px] sm:mt-[70px] size-[24vw] vsm:size-[20vw] grid place-items-center p-[10px] md:p-[20px]">
           <div className="team1 w-full h-full">
             <img
               className="w-full h-full object-cover"
@@ -43,7 +43,7 @@ const Team = () => {
           </div>
         </div>
 
-        <div className="team2 mt-[70px] size-[20vw] grid place-items-center p-[10px] md:p-[20px]">
+        <div className="team2 mt-[20px] sm:mt-[70px] size-[24vw] vsm:size-[20vw] grid place-items-center p-[10px] md:p-[20px]">
           <div className="team2 w-full h-full">
             <img
               className="w-full h-full object-cover"
@@ -53,7 +53,7 @@ const Team = () => {
           </div>
         </div>
 
-        <div className="team2 size-[20vw] grid place-items-center p-[10px] md:p-[20px]">
+        <div className="team2 size-[24vw] vsm:size-[20vw] grid place-items-center p-[10px] md:p-[20px]">
           <div className="team2 w-full h-full">
             <img
               className="w-full h-full object-cover"
@@ -64,11 +64,13 @@ const Team = () => {
         </div>
       </div>
 
-      <div className="mt-[50px] flex items-center justify-center gap-[30px]">
-        <h1 className="text-center text-[16px] uppercase">Advisors</h1>
+      <div className="mt-[50px] flex items-center justify-center gap-[10px] sm;gap-[30px]">
+        <h1 className="text-center text-[10px] vsm:text-[16px] uppercase">
+          Advisors
+        </h1>
 
         <div className="flex">
-          <div className="team1 size-[136px] grid place-items-center p-[10px] md:p-[8px]">
+          <div className="team1 size-[60px] md:size-[136px] grid place-items-center p-[10px] md:p-[8px]">
             <div className="team1 w-full h-full">
               <img
                 className="w-full h-full object-cover"
@@ -77,7 +79,7 @@ const Team = () => {
               />
             </div>
           </div>
-          <div className="team1 size-[136px] grid place-items-center p-[10px] md:p-[8px]">
+          <div className="team1 size-[60px] md:size-[136px] grid place-items-center p-[10px] md:p-[8px]">
             <div className="team1 w-full h-full">
               <img
                 className="w-full h-full object-cover"
@@ -86,7 +88,7 @@ const Team = () => {
               />
             </div>
           </div>
-          <div className="team1 size-[136px] grid place-items-center p-[10px] md:p-[8px]">
+          <div className="team1 size-[60px] md:size-[136px] grid place-items-center p-[10px] md:p-[8px]">
             <div className="team1 w-full h-full">
               <img
                 className="w-full h-full object-cover"
@@ -95,7 +97,7 @@ const Team = () => {
               />
             </div>
           </div>
-          <div className="team1 size-[136px] grid place-items-center p-[10px] md:p-[8px]">
+          <div className="team1 size-[60px] md:size-[136px] grid place-items-center p-[10px] md:p-[8px]">
             <div className="team1 w-full h-full">
               <img
                 className="w-full h-full object-cover"
