@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useRef } from "react";
 import img1 from "../assets/about-img1.png";
 import img2 from "../assets/about-img2.png";
 import arrow from "../assets/about-arrow.png";
@@ -7,11 +7,61 @@ import aboutShape from "../assets/about-triangle.png";
 import gradient1 from "../assets/about-gradient1.png";
 import gradient2 from "../assets/about-gradient2.png";
 import gradient3 from "../assets/about-gradient3.png";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { useGSAP } from "@gsap/react";
+import SplitType from "split-type";
+
+gsap.registerPlugin(useGSAP, ScrollTrigger);
 
 const About = () => {
+  const aboutRef = useRef();
+
+  useGSAP(
+    () => {
+      const tl2 = gsap.timeline({
+        scrollTrigger: {
+          trigger: aboutRef.current,
+          start: "top 50%",
+        },
+      });
+
+      const textElement = document.querySelector(".text1");
+      const split = new SplitType(textElement, { types: "chars" });
+      const textElement2 = document.querySelector(".text2");
+      const split2 = new SplitType(textElement2, { types: "chars" });
+      const textElement3 = document.querySelector(".text3");
+      const split3 = new SplitType(textElement3, { types: "chars" });
+
+      tl2.from(split.chars, {
+        duration: 1,
+        y: 80,
+        stagger: 0.05,
+      });
+      tl2.from(split2.chars, {
+        duration: 0.5,
+        opacity: 0,
+        stagger: 0.01,
+      });
+      tl2.from(split3.chars, {
+        duration: 0.5,
+        opacity: 0,
+        stagger: 0.01,
+      });
+      tl2.from(".img", {
+        duration: 1,
+        opacity: 0,
+      });
+    },
+    { scope: aboutRef }
+  );
+
   return (
-    <div className="relative h-[65vh] vsm:h-screen md:h-[120vh] xl:h-fit w-full bg-[#000513] dark:bg-[#000513]">
-      <h1 className="pt-[30px] text-outline text-[20px] vsm:text-[30px] md:text-[50px] xmd:text-[95.86px] text-transparent text-center font-[PilatExtended-Heavy]">
+    <div
+      ref={aboutRef}
+      className="relative h-[65vh] vsm:h-screen md:h-[120vh] xl:h-fit w-full bg-[#000513] dark:bg-[#000513]"
+    >
+      <h1 className="text1 overflow-hidden leading-none mb-[20px] pt-[30px] text-outline text-[20px] vsm:text-[30px] md:text-[50px] xmd:text-[95.86px] text-transparent text-center font-[PilatExtended-Heavy]">
         HYPERMOVE
       </h1>
 
@@ -19,12 +69,12 @@ const About = () => {
         <div className="mt-[-50px] xl:mt-[80px] mx-auto w-[90%] xmd:w-[70%] xl:w-[35%] 2xl:w-[37%] flex flex-col items-center">
           <p className="text-center leading-[1.4] text-[13px] vsm:text-[16px]">
             <span className="text-[#00FFD1]">Hypermove</span>{" "}
-            <span className="opacity-[0.5] text-white">
+            <span className="text2 opacity-[0.5] text-white ">
               seamlessly integrates cutting-edge solutions like account
               abstraction & bridging the gap between web2 and web3 gaming.
             </span>
           </p>
-          <li className="mt-[10px] vsm:mt-[20px] text-center text-white leading-[1.3] text-[13px] vsm:text-[16px] opacity-[0.5] list-disc">
+          <li className="text3 mt-[10px] vsm:mt-[20px] text-center text-white leading-[1.3] text-[13px] vsm:text-[16px] opacity-[0.5] list-disc">
             Our mission is to elevate the gaming experience by introducing
             in-game NFTs, DeFi integration, AI agents, NPCs, and a diverse range
             of game modes.
@@ -37,7 +87,7 @@ const About = () => {
         </div>
 
         <div className="mx-auto">
-          <img src={img1} alt="game demo" />
+          <img className="img" src={img1} alt="game demo" />
         </div>
       </div>
 

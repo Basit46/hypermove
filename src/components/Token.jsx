@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useRef } from "react";
 import bg1 from "../assets/tokenImg1.png";
 import bg2 from "../assets/tokenImg2.png";
 import bg3 from "../assets/tokenImg3.png";
@@ -6,10 +6,51 @@ import coin1 from "../assets/coinImg1.png";
 import coin2 from "../assets/coinImg2.png";
 import coin3 from "../assets/coinImg3.png";
 import line from "../assets/token-line.png";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { useGSAP } from "@gsap/react";
+import SplitType from "split-type";
+
+gsap.registerPlugin(useGSAP, ScrollTrigger);
 
 const Token = () => {
+  const tokenRef = useRef();
+
+  useGSAP(
+    () => {
+      const tl2 = gsap.timeline({
+        scrollTrigger: {
+          trigger: tokenRef.current,
+          start: "top 50%",
+        },
+      });
+
+      const textElement = document.querySelector(".token .text2");
+      const split = new SplitType(textElement, { types: "chars" });
+
+      tl2.from(".text1", {
+        duration: 2,
+        opacity: 0,
+      });
+      tl2.from(split.chars, {
+        opacity: 0,
+        duration: 0.5,
+        stagger: 0.01,
+      });
+      tl2.from(".token-box", {
+        duration: 1,
+        opacity: 0,
+        stagger: 0.5,
+      });
+    },
+    { scope: tokenRef }
+  );
+
   return (
-    <div className="token relative mt-[80px] vsm:mt-[20px] mx-[20px] md:mx-[40px] xmd:mx-[60px]">
+    <div
+      ref={tokenRef}
+      className="token relative mt-[80px] vsm:mt-[20px] mx-[20px] md:mx-[40px] xmd:mx-[60px]"
+    >
       <div className="flex">
         <div className="w-fit h-fit relative">
           <div className="token-box1 hidden xl:block bg-[#222324] dark:bg-[#5741b4]" />
@@ -20,7 +61,7 @@ const Token = () => {
             src={coin1}
             alt="coin"
           />
-          <h1 className="absolute xl:top-1/2 xl:-translate-y-1/2 xl:right-[-400px] xl:mt-[-20px] font-[PilatExtended-Heavy] text-[40px] text-center vsm:text-left vsm:text-[64px] leading-none uppercase">
+          <h1 className="text1 absolute xl:top-1/2 xl:-translate-y-1/2 xl:right-[-400px] xl:mt-[-20px] font-[PilatExtended-Heavy] text-[40px] text-center vsm:text-left vsm:text-[64px] leading-none uppercase">
             Holding <br /> Token
           </h1>
         </div>
@@ -34,7 +75,7 @@ const Token = () => {
           />
         </h1>
 
-        <p className="hidden xl:block ml-[-200px] w-full mt-[70px] text-right text-[14px] opacity-50">
+        <p className="text2 hidden xl:block ml-[-200px] w-full mt-[70px] text-right text-[14px] opacity-50">
           $HYPE serves as a unified token for the entire <br /> Hypermove
           ecosystem, enabling seamless participation <br /> in daily missions,
           tournaments, NFT staking, and <br /> purchases with a single currency.

@@ -1,10 +1,38 @@
-import React from "react";
+import React, { useRef } from "react";
 import { BottomClaim, TopClaim } from "./Claim";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { useGSAP } from "@gsap/react";
+
+gsap.registerPlugin(useGSAP, ScrollTrigger);
 
 const Ecosystem = () => {
+  const ecosystemRef = useRef();
+
+  useGSAP(
+    () => {
+      const tl2 = gsap.timeline({
+        scrollTrigger: {
+          trigger: ecosystemRef.current,
+          start: "top 50%",
+        },
+      });
+
+      tl2.from(".text1", {
+        opacity: 0,
+      });
+      tl2.from(".hero-slide", {
+        opacity: 0,
+      });
+      tl2.from(".hero-slide2", {
+        opacity: 0,
+      });
+    },
+    { scope: ecosystemRef }
+  );
   return (
-    <div className="mt-[100px] ecosystem">
-      <h1 className="uppercase leading-none text-center text-[25px] md:text-[30px] xmd:text-[49px]">
+    <div ref={ecosystemRef} className="mt-[100px] ecosystem">
+      <h1 className="text1 uppercase leading-none text-center text-[25px] md:text-[30px] xmd:text-[49px]">
         contributing to <br />
         ecosystem
       </h1>

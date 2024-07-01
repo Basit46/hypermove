@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useRef, useState } from "react";
 import img1 from "../assets/featImg1.png";
 import img2 from "../assets/featImg2.png";
 import img3 from "../assets/featImg3.png";
@@ -9,8 +9,32 @@ import filled from "../assets/filled.svg";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { useGSAP } from "@gsap/react";
+
+gsap.registerPlugin(useGSAP, ScrollTrigger);
 
 const Features = () => {
+  const featuresRef = useRef();
+
+  useGSAP(
+    () => {
+      const tl2 = gsap.timeline({
+        scrollTrigger: {
+          trigger: featuresRef.current,
+          start: "top 50%",
+        },
+      });
+
+      tl2.from(".imgs", {
+        duration: 3,
+        opacity: 0,
+      });
+    },
+    { scope: featuresRef }
+  );
+
   const [currentSlide, setCurrentSlide] = useState(0);
 
   const slides = [
@@ -55,7 +79,7 @@ const Features = () => {
     ],
   };
   return (
-    <div className="px-[30px]">
+    <div ref={featuresRef} className="px-[30px]">
       <div className="relative mt-[20px] vsm:mt-[40px] sm:mt-[20px] md:mt-[70px] xl:mt-[-140px] w-fit ml-auto">
         <h1 className="hidden xl:block ml-auto text-outline text-[70px] text-transparent font-[PilatExtended-Heavy]">
           FEATURES
@@ -67,7 +91,7 @@ const Features = () => {
 
       {/* scale-[2.2] vsm:scale-[1.2] */}
 
-      <div className=" vsm:mt-[30px]">
+      <div className="imgs vsm:mt-[30px]">
         <div className="slider-container h-fit w-full">
           <Slider {...settings}>
             {slides.map((slide, index) => (

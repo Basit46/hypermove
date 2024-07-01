@@ -1,17 +1,60 @@
-import React from "react";
+import React, { useRef } from "react";
 import heroesImg from "../assets/heroes.png";
 import btnbg from "../assets/heroes-btnbg.png";
 import heroesBg from "../assets/heroesBg.png";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { useGSAP } from "@gsap/react";
+import SplitType from "split-type";
+
+gsap.registerPlugin(useGSAP, ScrollTrigger);
 
 const Heroes = () => {
+  const heroesRef = useRef();
+
+  useGSAP(
+    () => {
+      const tl2 = gsap.timeline({
+        scrollTrigger: {
+          trigger: heroesRef.current,
+          start: "top 50%",
+        },
+      });
+
+      const textElement = document.querySelector(".heroes .text1");
+      const split = new SplitType(textElement, { types: "chars" });
+      const textElement2 = document.querySelector(".heroes .text2");
+      const split2 = new SplitType(textElement2, { types: "chars" });
+
+      tl2.from(".img", {
+        duration: 2,
+        opacity: 0,
+        y: 200,
+      });
+      tl2.from(split.chars, {
+        opacity: 0,
+        duration: 1.5,
+      });
+      tl2.from(split2.chars, {
+        duration: 0.5,
+        opacity: 0,
+        stagger: 0.01,
+      });
+    },
+    { scope: heroesRef }
+  );
+
   return (
-    <div className="heroes relative mt-[50px] vsm:mt-[100px] pb-[60px] vsm:pb-[60px] md:pb-[30px]">
+    <div
+      ref={heroesRef}
+      className="heroes relative mt-[50px] vsm:mt-[100px] pb-[60px] vsm:pb-[60px] md:pb-[30px]"
+    >
       <h1 className="text-center text-outline text-[23px] vsm:text-[40px] md:text-[45px] xmd:text-[90px] text-transparent font-[PilatExtended-Heavy]">
         HEROES
       </h1>
 
       <img
-        className="relative z-[2] mt-[-30px] vsm:mt-[-50px] md:mt-[-130px] mx-auto"
+        className="img relative z-[2] mt-[-30px] vsm:mt-[-50px] md:mt-[-130px] mx-auto"
         src={heroesImg}
         alt="heroes"
       />
@@ -23,10 +66,10 @@ const Heroes = () => {
           </p>
           <img src={btnbg} alt="button background" />
         </button>
-        <h1 className="text-center w-full md:text-end text-[23px] vsm:text-[32px] font-[PilatExtended-Heavy]">
+        <h1 className="text1 text-center w-full md:text-end text-[23px] vsm:text-[32px] font-[PilatExtended-Heavy]">
           HYPER VARIANTS
         </h1>
-        <p className="w-[90%] sm:w-[80%] md:w-[65%] mx-auto md:mx-0 text-center text-[10px] vsm:text-[12px] sm:text-[14px]">
+        <p className="text2 w-[90%] sm:w-[80%] md:w-[65%] mx-auto md:mx-0 text-center text-[10px] vsm:text-[12px] sm:text-[14px]">
           In our world of Variants, every character brings unique abilities and
           playstyles to the table. Dive into our strategic role system, designed
           to enhance teamwork and reward tactical thinking for gratifying

@@ -15,31 +15,40 @@ const MobileMenu = () => {
         isNavOpen ? "top-0" : "top-[-130%]"
       } z-[21] navbar duration-500 fixed top-0 left-0 w-screen h-screen bg-black pt-[140px]`}
     >
-      <nav
-        onClick={() => setIsNavOpen(false)}
-        className="flex flex-col gap-[50px] items-center cursor-pointer"
-      >
+      <nav className="flex flex-col gap-[50px] items-center cursor-pointer">
         <p
           className={location.pathname === "/" && "active"}
-          onClick={() => navigate("/")}
+          onClick={() => {
+            navigate("/");
+            setIsNavOpen(false);
+          }}
         >
           HOME
         </p>
         <p
           className={location.hash.includes("partners") && "active"}
-          onClick={() => navigate("/about#partners")}
+          onClick={() => {
+            navigate("/about#partners");
+            setIsNavOpen(false);
+          }}
         >
           PARTNERS
         </p>
         <p
           className={location.hash.includes("roadmap") && "active"}
-          onClick={() => navigate("/about#roadmap")}
+          onClick={() => {
+            navigate("/about#roadmap");
+            setIsNavOpen(false);
+          }}
         >
           ROAD MAP
         </p>
         <p
           className={location.hash.includes("team") && "active"}
-          onClick={() => navigate("/about#team")}
+          onClick={() => {
+            navigate("/about#team");
+            setIsNavOpen(false);
+          }}
         >
           TEAM
         </p>

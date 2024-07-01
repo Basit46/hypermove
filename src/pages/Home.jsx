@@ -7,26 +7,27 @@ import Token from "../components/Token";
 import Ecosystem from "../components/Ecosystem";
 import line2 from "../assets/token-line2.png";
 import Blog from "../components/Blog";
-import MobileMenu from "../components/MobileMenu";
+
+import AnimatedPage from "../components/AnimatedPage";
 
 const Home = () => {
   return (
-    <div className="w-full relative">
-      <Hero />
-      <About />
-      <Features />
-      <Heroes />
-      <Token />
-      <img
-        className="mt-[20px] absolute left-0 w-full"
-        src={line2}
-        alt="line"
-      />
-      <Ecosystem />
-      <Blog />
-
-      {/* <div className="mint h-[500px] w-full bg-[red]"></div> */}
-    </div>
+    <AnimatedPage>
+      <div className="w-full relative">
+        <Hero />
+        <About />
+        <Features />
+        <Heroes />
+        <Token />
+        <img
+          className="mt-[20px] absolute left-0 w-full"
+          src={line2}
+          alt="line"
+        />
+        <Ecosystem />
+        <Blog />
+      </div>
+    </AnimatedPage>
   );
 };
 

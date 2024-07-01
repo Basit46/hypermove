@@ -4,67 +4,70 @@ import gradient from "../assets/blogGradient.png";
 import articleImg from "../assets/ArticleImg.png";
 import articleImg2 from "../assets/ArticleImg-2.png";
 import { useNavigate } from "react-router-dom";
+import AnimatedPage from "../components/AnimatedPage";
 
 const Blog = () => {
   return (
-    <div className="blog-page min-h-screen mt-[100px] sm:mt-[150px] mb-[100px]">
-      <div className="px-[20px]">
-        <p className="uppercase font-[600] text-[24px] sm:text-[32px] text-center">
-          Blog
-        </p>
-        <p className="uppercase text-[10px] vsm:text-[14px] text-center">
-          Discover the latest in crypto and play-to-earn gaming
-        </p>
-      </div>
-
-      <div className="relative mt-[30px] min-h-[50vh] flex flex-col">
-        <div className="">
-          <img className="w-full" src={line} alt="line" />
+    <AnimatedPage>
+      <div className="blog-page min-h-screen mt-[100px] sm:mt-[150px] mb-[100px]">
+        <div className="px-[20px]">
+          <p className="uppercase font-[600] text-[24px] sm:text-[32px] text-center">
+            Blog
+          </p>
+          <p className="uppercase text-[10px] vsm:text-[14px] text-center">
+            Discover the latest in crypto and play-to-earn gaming
+          </p>
         </div>
-        <div className="flex-1">
-          <div className="nav mx-auto mt-[30px] w-[50%] h-[28px] bg-[#FFFFFF0D] flex items-center">
-            <div className="active text-black h-full w-[114px] grid place-items-center font-Montserrat font-medium text-[14px]">
-              TAB1
+
+        <div className="relative mt-[30px] min-h-[50vh] flex flex-col">
+          <div className="">
+            <img className="w-full" src={line} alt="line" />
+          </div>
+          <div className="flex-1">
+            <div className="nav mx-auto mt-[30px] w-[50%] h-[28px] bg-[#FFFFFF0D] flex items-center">
+              <div className="active text-black h-full w-[114px] grid place-items-center font-Montserrat font-medium text-[14px]">
+                TAB1
+              </div>
+              <div className="h-full w-[114px] grid place-items-center font-Montserrat font-medium text-[14px]">
+                TAB2
+              </div>
+              <div className="h-full w-[114px] grid place-items-center font-Montserrat font-medium text-[14px]">
+                TAB2
+              </div>
+              <div className="h-full w-[114px] hidden md:grid place-items-center font-Montserrat font-medium text-[14px]">
+                TAB2
+              </div>
+              <div className="h-full w-[114px] hidden md:grid place-items-center font-Montserrat font-medium text-[14px]">
+                TAB2
+              </div>
+              <div className="h-full w-[114px] hidden md:grid place-items-center font-Montserrat font-medium text-[14px]">
+                TAB2
+              </div>
+              <div className="h-full w-[114px] hidden md:grid place-items-center font-Montserrat font-medium text-[14px]">
+                TAB2
+              </div>
             </div>
-            <div className="h-full w-[114px] grid place-items-center font-Montserrat font-medium text-[14px]">
-              TAB2
-            </div>
-            <div className="h-full w-[114px] grid place-items-center font-Montserrat font-medium text-[14px]">
-              TAB2
-            </div>
-            <div className="h-full w-[114px] hidden md:grid place-items-center font-Montserrat font-medium text-[14px]">
-              TAB2
-            </div>
-            <div className="h-full w-[114px] hidden md:grid place-items-center font-Montserrat font-medium text-[14px]">
-              TAB2
-            </div>
-            <div className="h-full w-[114px] hidden md:grid place-items-center font-Montserrat font-medium text-[14px]">
-              TAB2
-            </div>
-            <div className="h-full w-[114px] hidden md:grid place-items-center font-Montserrat font-medium text-[14px]">
-              TAB2
+
+            <div className="relative z-[2] mt-[30px] flex flex-wrap justify-center gap-[20px] px-[20px]">
+              <Article />
+              <Article />
+              <Article />
+              <Article large={true} />
+              <Article large={true} />
+              <Article />
+              <Article />
+              <Article />
             </div>
           </div>
 
-          <div className="relative z-[2] mt-[30px] flex flex-wrap justify-center gap-[20px] px-[20px]">
-            <Article />
-            <Article />
-            <Article />
-            <Article large={true} />
-            <Article large={true} />
-            <Article />
-            <Article />
-            <Article />
-          </div>
+          <img
+            className="absolute top-[6px] sm:top-[17px] left-0 w-full"
+            src={gradient}
+            alt="gradient"
+          />
         </div>
-
-        <img
-          className="absolute top-[6px] sm:top-[17px] left-0 w-full"
-          src={gradient}
-          alt="gradient"
-        />
       </div>
-    </div>
+    </AnimatedPage>
   );
 };
 

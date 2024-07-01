@@ -14,6 +14,7 @@ import Tournament from "./pages/Tournament";
 import ScrollTop from "./components/ScrollTop";
 import Download from "./pages/Download";
 import About from "./pages/About";
+import CoverPage from "./components/CoverPage";
 
 function App() {
   return (
@@ -35,6 +36,7 @@ function App() {
 
       <ScrollTop />
       <Footer />
+      <CoverPage />
     </div>
   );
 }
