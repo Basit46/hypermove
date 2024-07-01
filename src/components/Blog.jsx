@@ -1,23 +1,55 @@
-import React from "react";
+import React, { useRef } from "react";
 import blogImg from "../assets/blogImg.png";
 import border1 from "../assets/articleBorder1.png";
 import date1 from "../assets/articleDate1.svg";
 import img1 from "../assets/articleImg1.png";
 import border2 from "../assets/articleBorder2.png";
 import img2 from "../assets/articleImg2.png";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { useGSAP } from "@gsap/react";
+
+gsap.registerPlugin(useGSAP, ScrollTrigger);
 
 const Blog = () => {
+  const blogRef = useRef();
+
+  useGSAP(
+    () => {
+      const tl2 = gsap.timeline({
+        scrollTrigger: {
+          trigger: blogRef.current,
+          start: "top 50%",
+        },
+      });
+
+      tl2.from(".text1", {
+        opacity: 0,
+      });
+      tl2.from(".group", {
+        opacity: 0,
+        x: -200,
+        duration: 1.5,
+        stagger: 0.5,
+      });
+      tl2.from(".img", {
+        opacity: 0,
+      });
+    },
+    { scope: blogRef }
+  );
+
   return (
-    <div className="blog mt-[100px]">
+    <div ref={blogRef} className="blog mt-[100px]">
       <h1 className="leading-none pr-[20px] xmd:pr-[200px] text-end text-outline text-[50px] md:text-[50px] xmd:text-[90px] text-transparent font-[PilatExtended-Heavy]">
         BLOGS
       </h1>
-      <p className="pr-[20px] md:pr-[60px] text-end uppercase text-[30px] xmd:text-[32px] font-[PilatExtended-Heavy]">
+      <p className="text1 pr-[20px] md:pr-[60px] text-end uppercase text-[30px] xmd:text-[32px] font-[PilatExtended-Heavy]">
         latest news
       </p>
 
       <div className="mt-[20px] relative flex justify-center h-fit gap-[40px] items-center">
-        <div className="hidden lg:block h-full">
+        <div className="hidden lg:block h-full ">
           <div className="group cursor-pointer">
             <div className="article1 relative flex justify-center items-center group-hover:translate-x-[-100px] duration-200 group-hover:bg-article-gradient">
               <img src={border1} alt="border" />
@@ -63,7 +95,7 @@ const Blog = () => {
           </div>
         </div>
 
-        <div className="relative w-[90%] md:w-fit h-fit">
+        <div className="img relative w-[90%] md:w-fit h-fit">
           <img src={blogImg} alt="game demo" />
           <p className="absolute bottom-[20px] left-[10px] px-[20px] w-full text-[12px] md:text-[14px] text-[#D9D9D9] opacity-70">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
