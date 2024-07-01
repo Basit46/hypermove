@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import aboutLogo from "../assets/aboutLogo.png";
 import aboutImg1 from "../assets/aboutImg1.svg";
 import aboutImg2 from "../assets/aboutImg2.png";
@@ -12,8 +12,25 @@ import Roadmap from "../components/Roadmap";
 import AboutToken from "../components/AboutToken";
 import Team from "../components/Team";
 import FAQ from "../components/FAQ";
+import { useLocation } from "react-router-dom";
 
 const About = () => {
+  const location = useLocation();
+
+  useEffect(() => {
+    const scrollToSection = (id) => {
+      const element = document.getElementById(id);
+      if (element) {
+        element.scrollIntoView({ behavior: "smooth" });
+      }
+    };
+
+    if (location.hash) {
+      const sectionId = location.hash.substring(1);
+      scrollToSection(sectionId);
+    }
+  }, [location]);
+
   return (
     <div className="about-page bg-[#000513] mt-[150px] mb-[100px]">
       <h1 className="relative text-[16px] vsm:text-[20px] xmd:text-[24px] uppercase font-[PilatExtended-Light] text-center opacity-70">

@@ -6,7 +6,7 @@ import vector from "../assets/roadmapVector.svg";
 
 const Roadmap = () => {
   return (
-    <div className="roadmap mt-[50px]">
+    <div id="roadmap" className="roadmap mt-[50px]">
       <h1 className="text-center uppercase text-[24px]">Roadmap</h1>
 
       <div className="relative px-[10px] xmd:px-[10px] mt-[40px] flex flex-col gap-[30px] xmd:gap-0 xmd:flex-row justify-between ">

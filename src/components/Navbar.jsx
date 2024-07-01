@@ -5,11 +5,12 @@ import dark_icon from "../assets/dark_icon.svg";
 import { useTheme } from "../context/ThemeContext";
 import menu from "../assets/menuIcon.svg";
 import { FaTimes } from "react-icons/fa";
-import { useNavigate } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 
 const Navbar = () => {
   const { theme, setTheme, isNavOpen, setIsNavOpen } = useTheme();
   const navigate = useNavigate();
+  const location = useLocation();
 
   return (
     <div
@@ -23,14 +24,34 @@ const Navbar = () => {
         alt="logo"
       />
 
-      <nav className="hidden lg:flex gap-[20px] items-center">
-        <p className="active">HOME</p>
+      <nav className="hidden lg:flex gap-[20px] items-center cursor-pointer">
+        <p
+          className={location.pathname === "/" && "active"}
+          onClick={() => navigate("/")}
+        >
+          HOME
+        </p>
         <span>/</span>
-        <p>PARTNERS</p>
+        <p
+          className={location.hash.includes("partners") && "active"}
+          onClick={() => navigate("/about#partners")}
+        >
+          PARTNERS
+        </p>
         <span>/</span>
-        <p>ROAD MAP</p>
+        <p
+          className={location.hash.includes("roadmap") && "active"}
+          onClick={() => navigate("/about#roadmap")}
+        >
+          ROAD MAP
+        </p>
         <span>/</span>
-        <p>TEAM</p>
+        <p
+          className={location.hash.includes("team") && "active"}
+          onClick={() => navigate("/about#team")}
+        >
+          TEAM
+        </p>
       </nav>
 
       <div className="hidden icons lg:flex items-center h-[29px] cursor-pointer">

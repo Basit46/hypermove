@@ -11,7 +11,7 @@ import teamEllipse from "../assets/teamEllipse.png";
 
 const Team = () => {
   return (
-    <div className="team mt-[100px] min-h-[50vh]">
+    <div id="team" className="team mt-[100px] min-h-[50vh]">
       <h1 className="text-center text-[12px] vsm:text-[24px] uppercase">
         The Team Behind the Scenes
       </h1>

@@ -48,7 +48,7 @@ const AboutToken = () => {
         </p>
       </div>
 
-      <div className="mt-[250px] relative">
+      <div id="partners" className="mt-[250px] relative">
         <h1 className="text-center text-[12px] vsm:text-[24px]">PARTNERS</h1>
         <div className="mt-[30px] w-fit mx-auto">
           <img src={partner1} alt="partner" />
